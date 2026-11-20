@@ -78,27 +78,23 @@ git push -u origin main
 
 ---
 
-## 📁 Estrutura Multi-Páginas
+## 📁 Estrutura Oficial dos 6 Tópicos
 
-A WebQuest está dividida em páginas individuais dedicadas, com navegação integrada na barra superior e botões sequenciais de avanço/retorno no rodapé de cada etapa:
+A WebQuest está organizada exatamente nos 6 tópicos pedagógicos solicitados, com menu superior limpo, transições animadas e navegação sequencial:
 
 ```text
 Web Quest/
-├── index.html         # Página Inicial: Apresentação, Hero e Mapa de Navegação da WebQuest
-├── caso.html          # O Estudo de Caso: A história de Dona Francisca e Mariana em Imperatriz-MA
-├── introducao.html    # Introdução: Riscos de intoxicação e epidemia de desinformação nas redes
-├── tarefa.html        # A Tarefa: Cartilha Ilustrada, Campanha Digital e Parecer Técnico
-├── processo.html      # O Processo: Os 4 Papéis Cooperativos, 4 Fases e Checklist Interativo
-├── simulador.html     # Simulador Químico: Teste interativo de misturas e Escala de pH visual
-├── recursos.html      # Recursos: Links oficiais (ANVISA, CFQ, PhET, SBQ/QNESC, Disque-Intoxicação)
-├── avaliacao.html     # Avaliação: Matriz de Rubrica Analítica e Quiz de Fixação com 4 questões
-├── conclusao.html     # Conclusão: A Química a serviço da cidadania e defesa da vida
-├── professor.html     # Guia Docente: Alinhamento BNCC, Currículo do Maranhão, Metodologia e Créditos
+├── index.html            # 1. Introdução: Contextualização do caso, riscos das misturas e o que é a WebQuest
+├── caso.html             # 2. Estudo de Caso: A história de Dona Francisca e Mariana em Imperatriz-MA
+├── problematizacao.html  # 3. Problematização: Questões norteadoras para os estudantes
+├── atividade.html        # 4. Atividade Prática: Proposta em equipe + Simulador Químico com Frasco Animado
+├── avaliacao.html        # 5. Avaliação: Rubrica analítica (mobile/desktop) e Quiz interativo com confetes
+├── conclusao.html        # 6. Conclusão: Síntese pedagógica, alinhamento à BNCC e créditos
 ├── css/
-│   └── style.css      # Estilização completa, variáveis, temas claro/escuro e responsividade
+│   └── style.css         # Estilização completa, variáveis, animações moleculares e responsividade
 ├── js/
-│   └── script.js      # Lógica do simulador químico, controle de tema, checklist e quiz
-└── README.md          # Documentação do projeto e instruções de publicação
+│   └── script.js         # Lógica do simulador com frasco animado, controle de tema e quiz
+└── README.md             # Documentação do projeto e instruções de publicação
 ```
 
 ---
