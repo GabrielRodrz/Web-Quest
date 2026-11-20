@@ -1,6 +1,6 @@
 /* ==========================================================================
    WEBQUEST: LIMPEZA OU PERIGO? OS RISCOS INVISÍVEIS DAS MISTURAS CASEIRAS
-   Lógica Interativa: Simulador Químico, Checklist do Aluno e Quiz
+   Lógica Interativa: Simulador Químico, Animações Moleculares, Checklist e Quiz
    Autor: Alessandro Monteiro de Sousa
    ========================================================================== */
 
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSimulator();
   initChecklist();
   initQuiz();
+  createFloatingParticles();
 });
 
 /* ==========================================================================
@@ -19,7 +20,6 @@ function initThemeToggle() {
   const themeIcon = document.getElementById('themeIcon');
   const html = document.documentElement;
 
-  // Carregar tema salvo ou preferência do sistema
   const savedTheme = localStorage.getItem('webquest_theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   
@@ -48,7 +48,7 @@ function initThemeToggle() {
 }
 
 /* ==========================================================================
-   2. Simulador Químico de Misturas Domésticas
+   2. Simulador Químico de Misturas com Frasco Animado
    ========================================================================== */
 const chemicalData = {
   // Água Sanitária + Desincrustante Ácido (O caso de Dona Francisca)
@@ -121,7 +121,7 @@ const chemicalData = {
     hazards: "Risco de explosão em recipientes fechados e projeção de líquidos cáusticos nos olhos e rosto.",
     verdict: "EVITE! Inativa as propriedades de desinfecção de ambos os produtos e pode causar estouros mecânicos."
   },
-  // Detergente + Água
+  // Detergente + Bicarbonato
   "detergente_bicarbonato": {
     status: "success",
     badge: "✅ MISTURA SEGURA & EFICAZ (Ação Mecânica e Tensoativa)",
@@ -131,7 +131,7 @@ const chemicalData = {
     hazards: "Nenhum gás tóxico gerado. Totalmente seguro.",
     verdict: "APROVADO! Excelente alternativa caseira de baixo custo para remover panelas engorduradas e pias com segurança."
   },
-  // Água Sanitária + Sabão/Detergente Neutro
+  // Água Sanitária + Detergente Neutro
   "sanitaria_detergente": {
     status: "info",
     badge: "ℹ️ USE COM RESSALVAS (Atenção ao Rótulo)",
@@ -165,7 +165,6 @@ function initSimulator() {
       return;
     }
 
-    // Criar chave normalizada (ordem alfabética para ser simétrica)
     const key = [p1, p2].sort().join('_');
     const match = chemicalData[key] || getGenericReaction(p1, p2);
 
@@ -173,9 +172,15 @@ function initSimulator() {
   }
 
   function renderIdleState() {
+    resultCard.className = "reaction-screen";
     resultCard.innerHTML = `
       <div class="py-5 text-center text-muted">
-        <i class="fa-solid fa-flask-vial fa-3x mb-3 text-secondary opacity-50"></i>
+        <div class="flask-vis-wrapper mb-3">
+          <svg class="flask-svg" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42 10 H58 V35 L88 95 C92 103 86 112 76 112 H24 C14 112 8 103 12 95 L42 35 V10 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round" class="text-secondary opacity-50"/>
+            <path d="M38 10 H62" stroke="currentColor" stroke-width="5" stroke-linecap="round" class="text-secondary opacity-50"/>
+          </svg>
+        </div>
         <h5 class="fw-bold">Selecione dois produtos acima</h5>
         <p class="small mb-0">O simulador demonstrará a reação química, os gases produzidos e os riscos à saúde.</p>
       </div>
@@ -183,6 +188,7 @@ function initSimulator() {
   }
 
   function renderSameProduct() {
+    resultCard.className = "reaction-screen";
     resultCard.innerHTML = `
       <div class="py-4 text-center">
         <span class="badge bg-secondary mb-2">PRODUTOS IGUAIS</span>
@@ -207,20 +213,68 @@ function initSimulator() {
   function renderResult(data) {
     let badgeClass = "bg-danger text-white";
     let borderClass = "border-danger";
+    let liquidColor = "#84cc16";
+    let animationEffect = "";
 
-    if (data.status === "warning") {
+    resultCard.classList.remove('toxic-pulse');
+
+    if (data.status === "danger") {
+      badgeClass = "bg-danger text-white";
+      borderClass = "border-danger";
+      liquidColor = "#a3e635"; // Verde-limão tóxico (Cl₂ gasoso)
+      resultCard.classList.add('toxic-pulse');
+      animationEffect = `
+        <div class="chem-fumes">
+          <span class="fume-cloud f1"></span>
+          <span class="fume-cloud f2"></span>
+          <span class="fume-cloud f3"></span>
+        </div>
+      `;
+    } else if (data.status === "warning") {
       badgeClass = "bg-warning text-dark";
       borderClass = "border-warning";
+      liquidColor = "#f59e0b"; // Âmbar efervescente
+      animationEffect = `
+        <div class="chem-fizz">
+          <span class="fizz-dot b1"></span>
+          <span class="fizz-dot b2"></span>
+          <span class="fizz-dot b3"></span>
+          <span class="fizz-dot b4"></span>
+        </div>
+      `;
     } else if (data.status === "success") {
       badgeClass = "bg-success text-white";
       borderClass = "border-success";
+      liquidColor = "#06b6d4"; // Azul-piscina limpo
+      animationEffect = `
+        <div class="chem-fizz">
+          <span class="fizz-dot b1" style="background: rgba(255,255,255,0.85);"></span>
+          <span class="fizz-dot b2" style="background: rgba(255,255,255,0.85);"></span>
+        </div>
+      `;
     } else if (data.status === "info") {
       badgeClass = "bg-info text-dark";
       borderClass = "border-info";
+      liquidColor = "#64748b";
     }
+
+    const flaskGraphic = `
+      <div class="flask-vis-wrapper">
+        ${animationEffect}
+        <svg class="flask-svg" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M42 10 H58 V35 L88 95 C92 103 86 112 76 112 H24 C14 112 8 103 12 95 L42 35 V10 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round" class="text-secondary opacity-75"/>
+          <path d="M38 10 H62" stroke="currentColor" stroke-width="5" stroke-linecap="round" class="text-secondary"/>
+          <path class="flask-liquid-path" d="M22 92 L38 58 H62 L78 92 C80 98 76 106 68 106 H32 C24 106 20 98 22 92 Z" fill="${liquidColor}" opacity="0.85"/>
+          <line x1="48" y1="70" x2="56" y2="70" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+          <line x1="45" y1="82" x2="55" y2="82" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+          <line x1="42" y1="94" x2="54" y2="94" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+        </svg>
+      </div>
+    `;
 
     resultCard.innerHTML = `
       <div class="text-start w-100">
+        ${flaskGraphic}
         <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
           <span class="reaction-badge ${badgeClass}">${data.badge}</span>
           <span class="small text-muted font-mono"><i class="fa-solid fa-atom me-1"></i>Análise Estequiométrica</span>
@@ -240,7 +294,7 @@ function initSimulator() {
             <p class="small text-muted mb-0">${data.hazards}</p>
           </div>
           <div class="col-md-5">
-            <div class="p-3 rounded bg-subtle border ${borderClass} h-100 d-flex flex-column justify-content-between">
+            <div class="p-3 rounded bg-subtle border ${borderClass} d-flex flex-column justify-content-between">
               <div>
                 <span class="d-block fw-bold small text-uppercase mb-2 text-main"><i class="fa-solid fa-shield-halved me-1"></i> Parecer Técnico:</span>
                 <p class="small fw-semibold text-main mb-0">${data.verdict}</p>
@@ -266,14 +320,14 @@ function initSimulator() {
     });
   }
 
-  // Predefinir a mistura do caso (Dona Francisca) como demonstração imediata
+  // Demonstração inicial da mistura de Dona Francisca
   select1.value = "sanitaria";
   select2.value = "desincrustante";
   evaluateMixture();
 }
 
 /* ==========================================================================
-   3. Checklist do Aluno (Persistência Local e Barra de Progresso)
+   3. Checklist do Aluno com Animação de Conclusão (Confetti)
    ========================================================================== */
 function initChecklist() {
   const checkboxes = document.querySelectorAll('.task-checkbox');
@@ -321,9 +375,24 @@ function initChecklist() {
     if (progressBar) {
       progressBar.style.width = `${percentage}%`;
       progressBar.setAttribute('aria-valuenow', percentage);
+      
+      if (percentage === 100) {
+        progressBar.classList.remove('bg-primary');
+        progressBar.classList.add('bg-success');
+      } else {
+        progressBar.classList.remove('bg-success');
+        progressBar.classList.add('bg-primary');
+      }
     }
     if (progressText) {
-      progressText.textContent = `${checked} de ${total} etapas concluídas (${percentage}%)`;
+      if (percentage === 100) {
+        progressText.innerHTML = `<strong>🎉 Missão 100% Concluída! Parabéns à Equipe!</strong>`;
+        progressText.classList.add('text-success');
+        launchConfetti();
+      } else {
+        progressText.textContent = `${checked} de ${total} etapas concluídas (${percentage}%)`;
+        progressText.classList.remove('text-success');
+      }
     }
   }
 
@@ -348,7 +417,7 @@ function initChecklist() {
 }
 
 /* ==========================================================================
-   4. Quiz Rápido de Fixação Pedagógica
+   4. Quiz com Comemoração de Acertos
    ========================================================================== */
 const quizQuestions = [
   {
@@ -422,7 +491,6 @@ function initQuiz() {
     const parentCard = document.getElementById(`quiz-q-${qIndex}`);
     const feedbackEl = document.getElementById(`feedback-${qIndex}`);
 
-    // Desativar botões da pergunta para evitar múltiplos cliques
     const allOptions = parentCard.querySelectorAll('.quiz-option');
     allOptions.forEach(b => {
       b.disabled = true;
@@ -435,9 +503,9 @@ function initQuiz() {
       btn.classList.add('correct');
       feedbackEl.classList.add('bg-success-subtle', 'text-success', 'border', 'border-success');
       feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check me-2"></i><strong>Excelente!</strong> ${question.explanation}`;
+      launchConfetti();
     } else {
       btn.classList.add('wrong');
-      // Destacar a correta
       allOptions.forEach((b, idx) => {
         if (question.options[idx].correct) {
           b.classList.add('correct');
@@ -447,4 +515,102 @@ function initQuiz() {
       feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark me-2"></i><strong>Incorreto.</strong> ${question.explanation}`;
     }
   });
+}
+
+/* ==========================================================================
+   5. Partículas Moleculares Flutuantes no Fundo (Efeito Ciência)
+   ========================================================================== */
+function createFloatingParticles() {
+  const targetHeader = document.querySelector('.hero-section') || document.querySelector('.page-header-banner');
+  if (!targetHeader) return;
+
+  const container = document.createElement('div');
+  container.className = 'chem-bg-particles';
+
+  const molecules = ['H₂O', 'Cl₂', 'pH', 'NaClO', 'HCl', 'OH⁻', 'CO₂'];
+  const leftPositions = [8, 22, 38, 55, 72, 88];
+
+  leftPositions.forEach((pos, idx) => {
+    const bubble = document.createElement('div');
+    bubble.className = 'chem-floating-bubble';
+    bubble.textContent = molecules[idx % molecules.length];
+    bubble.style.left = `${pos}%`;
+    const size = Math.floor(Math.random() * 18) + 36; // 36px a 54px
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.animationDuration = `${12 + (idx * 2)}s`;
+    bubble.style.animationDelay = `${idx * 1.8}s`;
+    container.appendChild(bubble);
+  });
+
+  targetHeader.style.position = 'relative';
+  targetHeader.appendChild(container);
+}
+
+/* ==========================================================================
+   6. Efeito Confete Leve para Acertos e Conclusão
+   ========================================================================== */
+function launchConfetti() {
+  let canvas = document.getElementById('confettiCanvas');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'confettiCanvas';
+    document.body.appendChild(canvas);
+  }
+
+  const ctx = canvas.getContext('2d');
+  const width = canvas.width = window.innerWidth;
+  const height = canvas.height = window.innerHeight;
+
+  const colors = ['#0284c7', '#0d9488', '#f59e0b', '#10b981', '#8b5cf6', '#ec4899'];
+  const particles = [];
+  const particleCount = 45;
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: width / 2,
+      y: height * 0.45,
+      vx: (Math.random() - 0.5) * 12,
+      vy: (Math.random() - 0.7) * 14,
+      size: Math.random() * 8 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rotation: Math.random() * 360,
+      vRotation: (Math.random() - 0.5) * 10,
+      alpha: 1
+    });
+  }
+
+  let animationFrame;
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    let activeParticles = 0;
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.35; // gravidade
+      p.rotation += p.vRotation;
+      p.alpha -= 0.012; // fade out
+
+      if (p.alpha > 0) {
+        activeParticles++;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      }
+    });
+
+    if (activeParticles > 0) {
+      animationFrame = requestAnimationFrame(render);
+    } else {
+      cancelAnimationFrame(animationFrame);
+      ctx.clearRect(0, 0, width, height);
+    }
+  }
+
+  render();
 }
