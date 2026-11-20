@@ -5,7 +5,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
+  initTheme();
   initSimulator();
   initChecklist();
   initQuiz();
@@ -13,38 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Controle de Tema (Claro / Escuro)
+   1. Tema Escuro Permanente
    ========================================================================== */
-function initThemeToggle() {
-  const toggleBtn = document.getElementById('themeToggleBtn');
-  const themeIcon = document.getElementById('themeIcon');
-  const html = document.documentElement;
-
-  const savedTheme = localStorage.getItem('webquest_theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-  html.setAttribute('data-bs-theme', currentTheme);
-  updateThemeIcon(currentTheme);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const activeTheme = html.getAttribute('data-bs-theme');
-      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-bs-theme', newTheme);
-      localStorage.setItem('webquest_theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
-  }
-
-  function updateThemeIcon(theme) {
-    if (!themeIcon) return;
-    if (theme === 'dark') {
-      themeIcon.className = 'fa-solid fa-sun text-warning';
-    } else {
-      themeIcon.className = 'fa-solid fa-moon text-secondary';
-    }
-  }
+function initTheme() {
+  document.documentElement.setAttribute('data-bs-theme', 'dark');
 }
 
 /* ==========================================================================
