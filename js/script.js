@@ -191,7 +191,7 @@ function initSimulator() {
     if (data.status === "danger") {
       badgeClass = "bg-danger text-white";
       borderClass = "border-danger";
-      liquidColor = "#dc2626"; // Vermelho Alerta
+      liquidColor = "#b91c1c"; // Tijolo Alerta
       animationEffect = `
         <div class="chem-fumes">
           <span class="fume-cloud f1"></span>
@@ -202,7 +202,7 @@ function initSimulator() {
     } else if (data.status === "warning") {
       badgeClass = "bg-warning text-dark";
       borderClass = "border-warning";
-      liquidColor = "#d97706"; // Âmbar Aviso
+      liquidColor = "#b45c18"; // Terracota / Âmbar
       animationEffect = `
         <div class="chem-fizz">
           <span class="fizz-dot b1"></span>
@@ -214,29 +214,29 @@ function initSimulator() {
     } else if (data.status === "success") {
       badgeClass = "bg-success text-white";
       borderClass = "border-success";
-      liquidColor = "#16a34a"; // Verde Aprovado
+      liquidColor = "#1e5e3a"; // Verde Floresta Aprovado
       animationEffect = `
         <div class="chem-fizz">
-          <span class="fizz-dot b1" style="background: rgba(22, 163, 74, 0.7);"></span>
-          <span class="fizz-dot b2" style="background: rgba(22, 163, 74, 0.7);"></span>
+          <span class="fizz-dot b1" style="background: rgba(30, 94, 58, 0.7);"></span>
+          <span class="fizz-dot b2" style="background: rgba(30, 94, 58, 0.7);"></span>
         </div>
       `;
     } else if (data.status === "info") {
       badgeClass = "bg-primary text-white";
       borderClass = "border-primary";
-      liquidColor = "#1d4ed8";
+      liquidColor = "#561e0a";
     }
 
     const flaskGraphic = `
       <div class="flask-vis-wrapper">
         ${animationEffect}
         <svg class="flask-svg" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M42 10 H58 V35 L88 95 C92 103 86 112 76 112 H24 C14 112 8 103 12 95 L42 35 V10 Z" stroke="#334155" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M38 10 H62" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+          <path d="M42 10 H58 V35 L88 95 C92 103 86 112 76 112 H24 C14 112 8 103 12 95 L42 35 V10 Z" stroke="#4a3e36" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M38 10 H62" stroke="#4a3e36" stroke-width="5" stroke-linecap="round"/>
           <path class="flask-liquid-path" d="M22 92 L38 58 H62 L78 92 C80 98 76 106 68 106 H32 C24 106 20 98 22 92 Z" fill="${liquidColor}" opacity="0.85"/>
-          <line x1="48" y1="70" x2="56" y2="70" stroke="#475569" stroke-width="2" opacity="0.6"/>
-          <line x1="45" y1="82" x2="55" y2="82" stroke="#475569" stroke-width="2" opacity="0.6"/>
-          <line x1="42" y1="94" x2="54" y2="94" stroke="#475569" stroke-width="2" opacity="0.6"/>
+          <line x1="48" y1="70" x2="56" y2="70" stroke="#786b62" stroke-width="2" opacity="0.6"/>
+          <line x1="45" y1="82" x2="55" y2="82" stroke="#786b62" stroke-width="2" opacity="0.6"/>
+          <line x1="42" y1="94" x2="54" y2="94" stroke="#786b62" stroke-width="2" opacity="0.6"/>
         </svg>
       </div>
     `;

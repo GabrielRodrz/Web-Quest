@@ -2,65 +2,69 @@
    WEBQUEST DE QUÍMICA: LIMPEZA OU PERIGO?
    Estudo de Caso para o Ensino Médio • Imperatriz / Maranhão
    Autor: Alessandro Monteiro de Sousa
-   DESIGN INSTITUCIONAL CLARO (SEDUC-MA / ACADÊMICO) • 100% RESPONSIVO
+   DESIGN INSPIRADO NA OPRAH FOUNDATION (OWCF):
+   Elegante, Acolhedor, Tons Terrosos, Marfim e Serif Clássico (Lora)
    ========================================================================== */
 
 :root, [data-bs-theme="light"] {
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Cores Institucionais Educacionais (Limpo, Sóbrio e Acolhedor) */
-  --primary: #1d4ed8;            /* Azul Real Institucional */
-  --primary-hover: #1e40af;
-  --primary-subtle: #eff6ff;     /* Fundo azul bem suave */
-  --primary-border: #bfdbfe;
-  --primary-rgb: 29, 78, 216;
+  /* Paleta Oprah Foundation (Quente, Nobre, Confiável e Humana) */
+  --primary: #561e0a;               /* Mogno Profundo / Chocolate Borgonha */
+  --primary-hover: #3d1406;
+  --primary-subtle: #fcf6f0;        /* Marfim rosado suave */
+  --primary-border: #ecd9cb;
+  --primary-rgb: 86, 30, 10;
   
-  --secondary: #0891b2;          /* Azul Petróleo / Ciano sóbrio */
-  --secondary-subtle: #ecfeff;
+  --secondary: #b45c18;             /* Terracota Queimado / Âmbar Quente */
+  --secondary-hover: #964a11;
+  --secondary-subtle: #fdf5ee;
+  --secondary-border: #f4d9c3;
   
-  --accent: #d97706;             /* Âmbar institucional */
-  --accent-subtle: #fffbeb;
+  --accent: #b45c18;
+  --accent-subtle: #fdf5ee;
 
-  --danger-custom: #dc2626;      /* Vermelho alerta institucional */
+  --danger-custom: #b91c1c;         /* Tijolo / Vermelho clássico */
   --danger-subtle: #fef2f2;
   --danger-border: #fecaca;
   
-  --warning-custom: #d97706;     /* Âmbar aviso */
-  --warning-subtle: #fffbeb;
-  --warning-border: #fde68a;
+  --warning-custom: #b45c18;        /* Âmbar terracota */
+  --warning-subtle: #fffbf5;
+  --warning-border: #fed7aa;
   
-  --success-custom: #16a34a;     /* Verde institucional */
-  --success-subtle: #f0fdf4;
+  --success-custom: #1e5e3a;        /* Verde Floresta / Oliva Clássico */
+  --success-subtle: #f2f8f4;
   --success-border: #bbf7d0;
 
-  --bg-body: #f8fafc;            /* Fundo cinza suave muito limpo */
-  --bg-surface: #ffffff;         /* Branco puro para os cards */
-  --bg-surface-elevated: #f1f5f9;/* Cinza claro para áreas de destaque */
-  --bg-subtle: #f8fafc;
+  --bg-body: #faf7f2;               /* Linho / Marfim suave acolhedor */
+  --bg-surface: #ffffff;            /* Branco puro para leitura limpa */
+  --bg-surface-elevated: #f4efe7;   /* Areia suave para áreas de destaque */
+  --bg-subtle: #f5f0e8;
   
-  --text-main: #0f172a;          /* Texto principal escuro, alto contraste */
-  --text-muted: #475569;         /* Texto secundário legível */
+  --text-main: #2b221d;             /* Marrom carvão profundo, excelente leitura */
+  --text-muted: #6b6058;            /* Texto secundário em tom café sóbrio */
   --text-inverted: #ffffff;
   
-  --border-color: #e2e8f0;       /* Bordas sutis e limpas */
-  --border-subtle: #edf2f7;
+  --border-color: #e8e0d5;          /* Linho sutil */
+  --border-subtle: #f0eae1;
   
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(86, 30, 10, 0.04);
+  --shadow-md: 0 4px 12px -2px rgba(86, 30, 10, 0.06);
+  --shadow-lg: 0 10px 25px -4px rgba(86, 30, 10, 0.08);
   
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 18px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
   
-  --nav-height: 64px;
-  --transition: all 0.2s ease-in-out;
+  --nav-height: 70px;
+  --transition: all 0.22s ease-in-out;
 }
 
 /* ==========================================================================
-   Base & Tipografia
+   Base & Tipografia Editorial
    ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -74,20 +78,33 @@ html, body {
   background-color: var(--bg-body);
   color: var(--text-main);
   font-family: var(--font-sans);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   color: var(--text-main);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+}
+
+h5, h6 {
+  color: var(--text-main);
+  font-family: var(--font-sans);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.35;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 .font-mono {
   font-family: var(--font-mono);
 }
 
-/* Aproveitamento Amplo da Tela (Elimina Bordas Gigantes) */
+/* Aproveitamento Amplo da Tela (Sem Bordas Vazias Exageradas) */
 .container, .container-xl, .container-lg {
   max-width: 1380px !important;
   width: 100% !important;
@@ -102,73 +119,82 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Barra de Navegação Institucional
+   Barra de Navegação Editorial Estilo Fundação
    ========================================================================== */
 .custom-navbar {
   min-height: var(--nav-height);
   background-color: #ffffff !important;
-  border-bottom: 2px solid var(--primary);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
-  transition: var(--transition);
+  border-bottom: 2px solid var(--secondary);
+  box-shadow: 0 2px 10px rgba(86, 30, 10, 0.04);
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
+  gap: 12px;
   color: var(--text-main) !important;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--primary) !important;
 }
 
 .navbar-brand .stat-icon {
   background-color: var(--primary) !important;
   color: #ffffff !important;
   border-radius: var(--radius-sm);
+  width: 38px;
+  height: 38px;
 }
 
 .nav-link {
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.92rem;
-  color: #475569 !important;
+  color: var(--text-muted) !important;
   padding: 0.45rem 0.85rem !important;
   border-radius: var(--radius-sm);
   transition: var(--transition);
 }
 
 .nav-link:hover {
-  color: var(--primary) !important;
-  background-color: var(--primary-subtle);
+  color: var(--secondary) !important;
+  background-color: var(--secondary-subtle);
 }
 
 .nav-link.active {
   color: var(--primary) !important;
   background-color: var(--primary-subtle);
+  border-bottom: 2px solid var(--primary);
   font-weight: 700;
 }
 
 /* ==========================================================================
-   Cabeçalhos de Seção & Hero
+   Hero & Cabeçalhos Editoriais
    ========================================================================== */
 .hero-section {
   position: relative;
   background-color: #ffffff;
-  padding: 3rem 0 2.25rem;
+  padding: 3.5rem 0 2.5rem;
   border-bottom: 1px solid var(--border-color);
 }
 
 .page-header-banner {
-  padding: 2.5rem 0 1.75rem;
+  padding: 2.75rem 0 2rem;
   background-color: #ffffff;
   border-bottom: 1px solid var(--border-color);
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .badge-hero {
-  background-color: var(--primary-subtle);
-  color: var(--primary);
-  border: 1px solid var(--primary-border);
+  background-color: var(--secondary-subtle);
+  color: var(--secondary);
+  border: 1px solid var(--secondary-border);
+  font-family: var(--font-sans);
   font-weight: 700;
   padding: 0.35rem 0.85rem;
   border-radius: 9999px;
@@ -176,64 +202,100 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 
 .hero-title {
-  font-size: clamp(2rem, 3.8vw, 3rem);
-  font-weight: 800;
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--text-main);
-  line-height: 1.15;
+  color: var(--primary);
+  line-height: 1.18;
 }
 
 .hero-gradient-text {
-  color: var(--primary);
+  color: var(--secondary);
+  font-style: italic;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-muted);
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.7;
 }
 
 .section-tag {
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--primary);
-  margin-bottom: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
   display: block;
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: var(--text-main);
-  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
 }
 
 .section-desc {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
-  max-width: 820px;
+  max-width: 840px;
 }
 
 /* ==========================================================================
-   Cards Institucionais
+   Botões e Controles Elegantes
+   ========================================================================== */
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #ffffff !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(86, 30, 10, 0.15) !important;
+}
+
+.btn-outline-secondary {
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+  background-color: #ffffff !important;
+}
+
+.btn-outline-secondary:hover {
+  border-color: var(--secondary) !important;
+  color: var(--secondary) !important;
+  background-color: var(--secondary-subtle) !important;
+}
+
+/* ==========================================================================
+   Cards Estilo Fundação (Branco, Borda Suave, Sombra Acolhedora)
    ========================================================================== */
 .custom-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.75rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
 .custom-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: #cbd5e1;
+  border-color: var(--secondary-border);
 }
 
 .hover-card:hover {
@@ -244,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 2.25rem;
+  padding: 2.5rem;
   box-shadow: var(--shadow-sm);
   position: relative;
 }
@@ -256,13 +318,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 @media (max-width: 576px) {
   .case-story-card {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
   .custom-card {
     padding: 1.25rem;
@@ -270,43 +332,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-md);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 
-/* Diálogos Claros e Agradáveis */
+/* Diálogos com Estética Editorial (Tipo Citação) */
 .dialogue-bubble {
-  background-color: #f8fafc;
-  border-left: 4px solid var(--primary);
-  padding: 0.85rem 1.15rem;
+  background-color: #faf7f2;
+  border-left: 4px solid var(--secondary);
+  padding: 1rem 1.35rem;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  margin: 0.85rem 0;
+  margin: 1.1rem 0;
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  font-size: 1.05rem;
 }
 
 .dialogue-bubble.danger {
   border-left-color: var(--danger-custom);
-  background-color: var(--danger-subtle);
+  background-color: #fff9f9;
   border-top-color: var(--danger-border);
   border-right-color: var(--danger-border);
   border-bottom-color: var(--danger-border);
 }
 
 .dialogue-speaker {
+  font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--primary);
-  margin-bottom: 3px;
+  letter-spacing: 0.05em;
+  color: var(--secondary);
+  margin-bottom: 4px;
 }
 
 .dialogue-bubble.danger .dialogue-speaker {
@@ -314,21 +378,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Simulador Químico Institucional
+   Simulador Químico Elegante
    ========================================================================== */
 .simulator-card {
   background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 2rem;
   box-shadow: var(--shadow-md);
 }
 
 .reaction-screen {
-  background-color: #f8fafc;
+  background-color: #faf7f2;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.75rem;
   min-height: 240px;
   display: flex;
   flex-direction: column;
@@ -339,18 +403,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .formula-display {
-  background-color: #f1f5f9;
-  color: var(--text-main);
-  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  color: var(--primary);
+  padding: 0.85rem 1.2rem;
   border-radius: var(--radius-md);
+  font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: 600;
-  margin: 0.85rem 0;
+  margin: 0.9rem 0;
   border: 1px solid var(--border-color);
   word-break: break-word;
 }
 
-/* Frasco Animado para o Simulador */
+/* Frasco de Vidro Limpo */
 .flask-vis-wrapper {
   position: relative;
   width: 80px;
@@ -379,7 +444,6 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scaleY(1.02) rotate(-0.4deg); }
 }
 
-/* Efeito sutil de fumaça e borbulhas */
 .chem-fumes {
   position: absolute;
   top: -15px;
@@ -394,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 .fume-cloud {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(220, 38, 38, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180, 92, 24, 0.45) 0%, transparent 70%);
   opacity: 0;
   animation: fumeRise 2s infinite ease-out;
 }
@@ -423,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
 .fizz-dot {
   position: absolute;
   border-radius: 50%;
-  background: rgba(14, 165, 233, 0.8);
+  background: rgba(180, 92, 24, 0.75);
   animation: fizzPop 1.3s infinite ease-in;
 }
 
@@ -439,7 +503,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Checklist & Quiz Interativo
+   Checklist & Quiz
    ========================================================================== */
 .checklist-item {
   display: flex;
@@ -448,24 +512,24 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.85rem 1rem;
   background-color: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   margin-bottom: 0.65rem;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .checklist-item:hover {
-  background-color: #f8fafc;
+  background-color: #faf7f2;
 }
 
 .checklist-item.completed {
-  border-color: #16a34a;
-  background-color: #f0fdf4;
+  border-color: var(--success-custom);
+  background-color: var(--success-subtle);
 }
 
 .checklist-item input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   margin-top: 2px;
   cursor: pointer;
   flex-shrink: 0;
@@ -476,32 +540,32 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 0.85rem 1.15rem;
+  padding: 0.9rem 1.25rem;
   margin-bottom: 0.65rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
   background-color: #ffffff;
   color: var(--text-main);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 500;
   transition: var(--transition);
 }
 
 .quiz-option:hover {
-  border-color: var(--primary);
-  background-color: var(--primary-subtle);
+  border-color: var(--secondary);
+  background-color: var(--secondary-subtle);
 }
 
 .quiz-option.correct {
-  background-color: #f0fdf4 !important;
-  border-color: #16a34a !important;
-  color: #15803d !important;
+  background-color: #f2f8f4 !important;
+  border-color: #1e5e3a !important;
+  color: #1e5e3a !important;
   font-weight: 700;
 }
 
 .quiz-option.wrong {
   background-color: #fef2f2 !important;
-  border-color: #dc2626 !important;
+  border-color: #b91c1c !important;
   color: #b91c1c !important;
 }
 
@@ -509,9 +573,9 @@ h1, h2, h3, h4, h5, h6 {
    Navegação Inferior
    ========================================================================== */
 .page-nav-controls {
-  padding: 2rem 0;
+  padding: 2.25rem 0;
   border-top: 1px solid var(--border-color);
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -534,16 +598,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Rodapé Institucional
+   Rodapé Estilo Fundação
    ========================================================================== */
 .custom-footer {
   background-color: #ffffff;
   border-top: 1px solid var(--border-color);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
-/* Confetti Canvas */
 #confettiCanvas {
   position: fixed;
   top: 0;
