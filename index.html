@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="WebQuest Interativa de Química para o Ensino Médio: Limpeza ou Perigo? Os Riscos Invisíveis das Misturas Caseiras. Estudo de caso em Imperatriz - MA.">
   <meta name="author" content="Alessandro Monteiro de Sousa">
-  <title>WebQuest de Química | Limpeza ou Perigo? Misturas Caseiras</title>
+  <title>Início | WebQuest de Química: Limpeza ou Perigo?</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
+<body>
 
   <!-- ==========================================================================
        BARRA DE NAVEGAÇÃO
        ========================================================================== -->
   <nav id="mainNavbar" class="navbar navbar-expand-xl fixed-top custom-navbar">
     <div class="container-fluid px-lg-5">
-      <a class="navbar-brand" href="#hero">
+      <a class="navbar-brand" href="index.html">
         <div class="brand-icon-wrapper">
           <i class="fa-solid fa-flask-vial"></i>
         </div>
@@ -44,15 +44,16 @@
 
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav mx-auto mb-2 mb-xl-0 gap-1">
-          <li class="nav-item"><a class="nav-link" href="#caso"><i class="fa-solid fa-book-open me-1 text-primary"></i> O Caso</a></li>
-          <li class="nav-item"><a class="nav-link" href="#introducao"><i class="fa-solid fa-lightbulb me-1 text-warning"></i> Introdução</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tarefa"><i class="fa-solid fa-list-check me-1 text-success"></i> Tarefa</a></li>
-          <li class="nav-item"><a class="nav-link" href="#processo"><i class="fa-solid fa-gears me-1 text-info"></i> Processo</a></li>
-          <li class="nav-item"><a class="nav-link" href="#simulador"><i class="fa-solid fa-atom me-1 text-danger"></i> Simulador</a></li>
-          <li class="nav-item"><a class="nav-link" href="#recursos"><i class="fa-solid fa-link me-1 text-secondary"></i> Recursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#avaliacao"><i class="fa-solid fa-clipboard-check me-1 text-primary"></i> Avaliação</a></li>
-          <li class="nav-item"><a class="nav-link" href="#conclusao"><i class="fa-solid fa-flag-checkered me-1 text-success"></i> Conclusão</a></li>
-          <li class="nav-item"><a class="nav-link" href="#professor"><i class="fa-solid fa-graduation-cap me-1 text-purple"></i> Guia Docente</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-1"></i> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="caso.html"><i class="fa-solid fa-book-open me-1 text-primary"></i> O Caso</a></li>
+          <li class="nav-item"><a class="nav-link" href="introducao.html"><i class="fa-solid fa-lightbulb me-1 text-warning"></i> Introdução</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarefa.html"><i class="fa-solid fa-list-check me-1 text-success"></i> Tarefa</a></li>
+          <li class="nav-item"><a class="nav-link" href="processo.html"><i class="fa-solid fa-gears me-1 text-info"></i> Processo</a></li>
+          <li class="nav-item"><a class="nav-link" href="simulador.html"><i class="fa-solid fa-atom me-1 text-danger"></i> Simulador</a></li>
+          <li class="nav-item"><a class="nav-link" href="recursos.html"><i class="fa-solid fa-link me-1 text-secondary"></i> Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="avaliacao.html"><i class="fa-solid fa-clipboard-check me-1 text-primary"></i> Avaliação</a></li>
+          <li class="nav-item"><a class="nav-link" href="conclusao.html"><i class="fa-solid fa-flag-checkered me-1 text-success"></i> Conclusão</a></li>
+          <li class="nav-item"><a class="nav-link" href="professor.html"><i class="fa-solid fa-graduation-cap me-1 text-purple"></i> Guia Docente</a></li>
         </ul>
 
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
@@ -70,9 +71,9 @@
   </nav>
 
   <!-- ==========================================================================
-       HERO / APRESENTAÇÃO
+       HERO PRINCIPAL
        ========================================================================== -->
-  <header id="hero" class="hero-section">
+  <header class="hero-section" style="padding-top: 7rem;">
     <div class="container px-lg-5">
       <div class="row align-items-center g-5">
         <div class="col-lg-7">
@@ -87,15 +88,15 @@
           </h1>
 
           <p class="hero-subtitle mb-4">
-            Uma WebQuest investigativa de Química para estudantes do Ensino Médio, inspirada em fatos reais ocorridos em <strong>Imperatriz, Maranhão</strong>. Descubra a ciência por trás dos produtos saneantes e salve vidas contra a desinformação.
+            Uma WebQuest investigativa de Química para estudantes do Ensino Médio, contextualizada em <strong>Imperatriz, Maranhão</strong>. Explore cada seção em páginas dedicadas e descubra a ciência por trás dos produtos saneantes para salvar vidas contra a desinformação.
           </p>
 
           <div class="d-flex flex-wrap gap-3 mb-4">
-            <a href="#caso" class="btn btn-primary btn-lg px-4 py-3 rounded-pill fw-bold shadow">
-              <i class="fa-solid fa-play me-2"></i> Investigar o Caso
+            <a href="caso.html" class="btn btn-primary btn-lg px-4 py-3 rounded-pill fw-bold shadow">
+              <i class="fa-solid fa-play me-2"></i> Começar pelo Estudo de Caso
             </a>
-            <a href="#simulador" class="btn btn-outline-secondary btn-lg px-4 py-3 rounded-pill fw-semibold">
-              <i class="fa-solid fa-flask me-2 text-primary"></i> Testar Misturas no Simulador
+            <a href="simulador.html" class="btn btn-outline-secondary btn-lg px-4 py-3 rounded-pill fw-semibold">
+              <i class="fa-solid fa-flask me-2 text-primary"></i> Acessar o Simulador Virtual
             </a>
           </div>
 
@@ -165,889 +166,189 @@
   </header>
 
   <!-- ==========================================================================
-       SEÇÃO 1: O ESTUDO DE CASO (NARRATIVA)
-       ========================================================================== -->
-  <section id="caso" class="section-wrapper">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-book-bookmark me-1"></i> Narrativa Realista</span>
-        <h2 class="section-title">O Estudo de Caso</h2>
-        <p class="section-desc mx-auto">
-          Conheça o dilema vivenciado por Dona Francisca e Mariana. Um conflito real que une ciência, vulnerabilidade socioeconômica e a urgência de uma tomada de decisão.
-        </p>
-      </div>
-
-      <div class="row g-4 align-items-stretch">
-        <div class="col-lg-8">
-          <div class="case-story-card h-100">
-            <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
-              <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold">
-                <i class="fa-solid fa-quote-left me-1"></i> Texto Base do Estudo de Caso
-              </span>
-              <span class="small text-muted font-mono"><i class="fa-solid fa-clock me-1"></i> Leitura: ~4 min</span>
-            </div>
-
-            <h3 class="fw-bold mb-3 text-main">Limpeza ou Perigo? Os Riscos Invisíveis das Misturas Caseiras</h3>
-
-            <p>
-              Na cidade de <strong>Imperatriz, no Maranhão</strong>, dona Francisca, de 45 anos, trabalhava como diarista há mais de quinze anos. Conhecida pela dedicação e pelo cuidado com a limpeza, ela costumava utilizar diferentes produtos químicos para remover manchas, gorduras e sujeiras difíceis. Com o aumento do preço dos produtos de limpeza, começou a procurar alternativas mais econômicas na internet, encontrando vídeos que ensinavam a preparar misturas caseiras consideradas mais potentes e eficientes.
-            </p>
-
-            <p>
-              Certo dia, dona Francisca recebeu uma proposta para realizar uma limpeza pesada em uma residência. A proprietária, dona Helena, exigiu que os banheiros fossem completamente higienizados, principalmente porque apresentavam manchas persistentes nos pisos e vasos sanitários.
-            </p>
-
-            <div class="dialogue-bubble">
-              <div class="dialogue-speaker"><i class="fa-solid fa-user me-1"></i> Dona Helena (Proprietária):</div>
-              <p class="mb-0 fst-italic">"— Francisca, preciso que você retire todas essas manchas. Já tentei vários produtos e nenhum resolveu."</p>
-            </div>
-
-            <div class="dialogue-bubble">
-              <div class="dialogue-speaker"><i class="fa-solid fa-spray-can-sparkles me-1"></i> Dona Francisca (Diarista):</div>
-              <p class="mb-0 fst-italic">"— Pode deixar, dona Helena. Vi uma receita na internet que promete remover até as sujeiras mais difíceis. Vou experimentar hoje."</p>
-            </div>
-
-            <p>
-              Durante a limpeza, Francisca utilizou <strong>água sanitária</strong> e, em seguida, acrescentou um <strong>limpador de cerâmica</strong> para tentar potencializar a remoção das manchas. Ela acreditava que a combinação dos dois produtos aumentaria a eficiência da limpeza, sem imaginar que poderia ser perigoso.
-            </p>
-
-            <p class="text-danger fw-semibold">
-              Poucos instantes depois, percebeu um odor irritante e começou a sentir ardência nos olhos, tosse intensa e dificuldade para respirar. Assustada, abandonou o banheiro e procurou ajuda.
-            </p>
-
-            <p>
-              Sua filha Mariana, estudante do 3º ano do Ensino Médio, estava na residência e percebeu o que havia acontecido.
-            </p>
-
-            <div class="dialogue-bubble danger">
-              <div class="dialogue-speaker"><i class="fa-solid fa-triangle-exclamation me-1"></i> Mariana (Estudante do 3º ano):</div>
-              <p class="mb-0 fst-italic">"— Mãe, o que a senhora colocou nesse banheiro? Está saindo um cheiro muito forte!"</p>
-            </div>
-
-            <div class="dialogue-bubble">
-              <div class="dialogue-speaker"><i class="fa-solid fa-spray-can-sparkles me-1"></i> Dona Francisca:</div>
-              <p class="mb-0 fst-italic">"— Misturei água sanitária com um produto para tirar manchas. Vi várias pessoas fazendo isso na internet. Achei que não teria problema."</p>
-            </div>
-
-            <p>
-              Mariana lembrou das aulas de Química, nas quais havia aprendido que algumas substâncias, quando misturadas, podem sofrer reações químicas e formar produtos perigosos. Ela sabia que a <strong>água sanitária</strong>, ao entrar em contato com determinados produtos ácidos, pode liberar <strong>gás cloro (Cl₂)</strong>, uma substância tóxica que afeta gravemente o sistema respiratório.
-            </p>
-
-            <p>
-              Preocupada, Mariana afastou as pessoas do ambiente e procurou ajuda para que sua mãe recebesse atendimento médico. Após o ocorrido, decidiu conversar com seu professor de Química na escola.
-            </p>
-
-            <div class="dialogue-bubble">
-              <div class="dialogue-speaker"><i class="fa-solid fa-graduation-cap me-1"></i> Mariana ao Professor de Química:</div>
-              <p class="mb-0 fst-italic">"— Professor, por que misturar produtos de limpeza pode ser tão perigoso, se eles são utilizados diariamente em nossas casas?"</p>
-            </div>
-
-            <p>
-              O professor explicou que os produtos possuem diferentes composições químicas e que algumas combinações podem desencadear reações perigosas. Ressaltou também que a eficiência da limpeza não depende da quantidade de produtos misturados, mas de sua <strong>composição, concentração e utilização adequada</strong>.
-            </p>
-
-            <div class="dialogue-bubble">
-              <div class="dialogue-speaker"><i class="fa-solid fa-users me-1"></i> Colega de Classe:</div>
-              <p class="mb-0 fst-italic">"— Mas professor, se um produto é ácido e o outro é básico, não deveria ocorrer apenas uma reação de neutralização?"</p>
-            </div>
-
-            <p>
-              O professor esclareceu que os produtos comerciais podem conter diversas substâncias e que nem toda reação entre eles resulta apenas na formação de sal e água inofensivos. Dependendo da composição, ocorrem reações de óxido-redução que desprendem gases altamente asfixiantes.
-            </p>
-
-            <p>
-              Ao voltar para casa, Mariana tentou convencer sua mãe a abandonar as misturas caseiras. Entretanto, Francisca demonstrou aflição e preocupação legítima:
-            </p>
-
-            <div class="dialogue-bubble">
-              <div class="dialogue-speaker"><i class="fa-solid fa-heart me-1"></i> Dona Francisca:</div>
-              <p class="mb-0 fst-italic">"— Minha filha, eu entendo o perigo, mas os produtos estão caros e meus clientes exigem uma limpeza rápida e eficiente. Como vou trabalhar sem gastar tanto?"</p>
-            </div>
-
-            <p>
-              A situação ficou ainda mais complicada quando Mariana descobriu que outras diaristas da comunidade também utilizavam misturas caseiras recomendadas nas redes sociais, acreditando que eram soluções econômicas e seguras. Diante desse problema, Mariana percebeu que precisava encontrar uma alternativa que considerasse <strong>tanto a segurança das trabalhadoras quanto suas dificuldades financeiras</strong>. Além disso, teria que enfrentar a desinformação presente na internet, onde muitas receitas eram divulgadas sem qualquer orientação científica.
-            </p>
-
-            <div class="p-3 rounded-4 bg-primary-subtle border border-primary mt-4">
-              <h5 class="fw-bold text-primary mb-2"><i class="fa-solid fa-bullhorn me-2"></i>O Grande Dilema</h5>
-              <p class="mb-0 text-main fw-medium">
-                Se você estivesse no lugar de Mariana, que solução proporia para ajudar sua mãe e as demais diaristas a realizar uma limpeza eficiente, econômica e segura? Como os conhecimentos de Química sobre misturas, reações químicas, ácidos, bases e pH poderiam contribuir para essa decisão? E como conscientizar a comunidade sobre os perigos das misturas caseiras divulgadas nas redes sociais?
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="custom-card mb-4">
-            <h5 class="fw-bold mb-3 text-main"><i class="fa-solid fa-certificate me-2 text-primary"></i>Critérios de Herreid (1998)</h5>
-            <p class="small text-muted mb-3">Segundo Sá & Queiroz (2010), um "bom caso" investigativo cumpre 11 características fundamentais observadas nesta narrativa:</p>
-            
-            <ul class="list-unstyled mb-0 d-flex flex-direction-column flex-column gap-2">
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Narra uma história envolvente</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Desperta o interesse pela questão</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> É atual e contemporâneo</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Produz empatia com as personagens</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Inclui diálogos dinâmicos</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> É relevante ao cotidiano do leitor</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Tem utilidade pedagógica (Química)</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Provoca um conflito ético/social</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Força uma decisão complexa</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> Permite generalizações científicas</li>
-              <li class="case-pedagogy-badge"><i class="fa-solid fa-check text-success"></i> É conciso e objetivo</li>
-            </ul>
-          </div>
-
-          <div class="custom-card bg-subtle">
-            <h5 class="fw-bold mb-3 text-main"><i class="fa-solid fa-people-arrows me-2 text-secondary"></i>Personagens Centrais</h5>
-            
-            <div class="mb-3">
-              <h6 class="fw-bold text-primary mb-1">Dona Francisca (45 anos)</h6>
-              <p class="small text-muted mb-0">Diarista há 15 anos em Imperatriz. Trabalhadora dedicada, pressionada pela inflação dos produtos e exigência de patrões.</p>
-            </div>
-            
-            <div class="mb-3">
-              <h6 class="fw-bold text-primary mb-1">Mariana (Filha de Francisca)</h6>
-              <p class="small text-muted mb-0">Estudante do 3º ano do Ensino Médio da rede pública estadual do Maranhão. Curiosa, crítica e afetuosa com a família.</p>
-            </div>
-
-            <div>
-              <h6 class="fw-bold text-primary mb-1">Professor & Colegas de Química</h6>
-              <p class="small text-muted mb-0">Mediadores do conhecimento científico formal, confrontando mitos populares e senso comum com leis químicas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 2: INTRODUÇÃO
-       ========================================================================== -->
-  <section id="introducao" class="section-wrapper bg-subtle">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-compass me-1"></i> Contextualização</span>
-        <h2 class="section-title">Introdução: O Desafio Científico e Social</h2>
-        <p class="section-desc mx-auto">
-          Por que produtos usados diariamente em nossas casas podem se tornar armas químicas letais quando misturados sem conhecimento?
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-danger-subtle text-danger mb-3">
-              <i class="fa-solid fa-skull-crossbones fa-xl"></i>
-            </div>
-            <h5 class="fw-bold text-main">Os Riscos Invisíveis</h5>
-            <p class="small text-muted mb-0">
-              Dados dos Centros de Informação e Assistência Toxicológica (CIATox) apontam que saneantes domissanitários estão entre as três principais causas de intoxicação humana no Brasil, com destaque para a inalação acidental de gases gerados por misturas caseiras.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-warning-subtle text-warning mb-3">
-              <i class="fa-solid fa-mobile-screen-button fa-xl"></i>
-            </div>
-            <h5 class="fw-bold text-main">A Epidemia de Desinformação</h5>
-            <p class="small text-muted mb-0">
-              Vídeos curtos no TikTok, Instagram e canais no YouTube acumulam milhões de visualizações promovendo "truques milagrosos" (hacks de limpeza). A efervescência de gases e a ilusão de poder mascaram a neutralização inútil e reações perigosas.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-success-subtle text-success mb-3">
-              <i class="fa-solid fa-scale-balanced fa-xl"></i>
-            </div>
-            <h5 class="fw-bold text-main">Ciência a Serviço da Vida</h5>
-            <p class="small text-muted mb-0">
-              Não basta dizer "não misture". É fundamental compreender a química dos reagentes (hipoclorito, ácidos, bases, tensoativos) e oferecer soluções que caibam no orçamento das famílias maranhenses e protejam a integridade das trabalhadoras.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 3: TAREFA (A MISSÃO)
-       ========================================================================== -->
-  <section id="tarefa" class="section-wrapper">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-bullseye me-1"></i> A Missão do Estudante</span>
-        <h2 class="section-title">A Tarefa</h2>
-        <p class="section-desc mx-auto">
-          Vocês foram convocados como uma comissão técnica de jovens cientistas do Maranhão para apoiar Mariana e construir um plano de ação completo.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <div class="custom-card border-top border-4 border-primary">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="badge bg-primary rounded-circle p-3 fs-5"><i class="fa-solid fa-file-shield"></i></span>
-              <h5 class="fw-bold mb-0 text-main">Produto 1: Cartilha Ilustrada</h5>
-            </div>
-            <h6 class="text-primary fw-bold">"Guia da Limpeza Segura e Econômica"</h6>
-            <p class="small text-muted">
-              Elaborar um folheto/cartilha digital (ou infográfico dobrável) em linguagem clara, humanizada e acessível para Dona Francisca e as diaristas da região de Imperatriz. Deve conter:
-            </p>
-            <ul class="small text-muted ps-3 mb-0">
-              <li>Tabela "Pode vs Nunca Misturar".</li>
-              <li>Receitas caseiras seguras de baixo custo (comprovadas quimicamente).</li>
-              <li>Instruções de diluição correta da água sanitária segundo a ANVISA.</li>
-              <li>Orientações de primeiros socorros caso ocorra inalação de gás.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="custom-card border-top border-4 border-danger">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="badge bg-danger rounded-circle p-3 fs-5"><i class="fa-solid fa-share-nodes"></i></span>
-              <h5 class="fw-bold mb-0 text-main">Produto 2: Campanha Digital</h5>
-            </div>
-            <h6 class="text-danger fw-bold">Desmascarando Mitos das Redes</h6>
-            <p class="small text-muted">
-              Criar o protótipo de uma postagem educativa para redes sociais (carrossel para Instagram ou roteiro de vídeo curto estilo TikTok/Reels):
-            </p>
-            <ul class="small text-muted ps-3 mb-0">
-              <li>Explicar de forma visual e criativa por que a mistura "Vinagre + Bicarbonato" é ineficaz (mito da espuma).</li>
-              <li>Alertar sobre os perigos da mistura de Água Sanitária com desincrustantes ou desinfetantes.</li>
-              <li>Tom respeitoso, sem culpar quem caiu no mito, valorizando o trabalho doméstico.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="custom-card border-top border-4 border-success">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="badge bg-success rounded-circle p-3 fs-5"><i class="fa-solid fa-square-poll-vertical"></i></span>
-              <h5 class="fw-bold mb-0 text-main">Produto 3: Parecer Técnico</h5>
-            </div>
-            <h6 class="text-success fw-bold">Fundamentação Química para o Professor</h6>
-            <p class="small text-muted">
-              Um relatório científico detalhado que responda com rigor aos questionamentos da aula de Química:
-            </p>
-            <ul class="small text-muted ps-3 mb-0">
-              <li>Equações químicas balanceadas das reações observadas no caso.</li>
-              <li>Explicação da diferença entre neutralização ácido-base e reações de óxido-redução (redox).</li>
-              <li>Análise da escala de pH dos reagentes envolvidos.</li>
-              <li>Planilha comparativa de custos: produtos comerciais de marca vs formulações seguras de baixo custo.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 4: PROCESSO (PAPÉIS E TIMELINE)
-       ========================================================================== -->
-  <section id="processo" class="section-wrapper bg-subtle">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-stairs me-1"></i> Metodologia Cooperativa</span>
-        <h2 class="section-title">O Processo: Como Realizar a Investigação</h2>
-        <p class="section-desc mx-auto">
-          Trabalhem em grupos de 4 integrantes. Cada membro assumirá uma função estratégica na equipe para que todos os aspectos do problema sejam resolvidos.
-        </p>
-      </div>
-
-      <!-- Papéis da Equipe -->
-      <h4 class="fw-bold mb-4 text-main text-center"><i class="fa-solid fa-id-card-clip me-2 text-primary"></i>Papéis Especializados no Grupo</h4>
-      <div class="row g-4 mb-5">
-        <div class="col-md-6 col-lg-3">
-          <div class="custom-card role-card role-chem">
-            <div class="stat-icon bg-primary-subtle text-primary mb-3">
-              <i class="fa-solid fa-flask"></i>
-            </div>
-            <h5 class="fw-bold text-main">1. O Químico Investigador</h5>
-            <p class="small text-muted mb-0">
-              Analisa as substâncias ativas nos rótulos comerciais, monta as equações balanceadas, investiga a oxidação/redução, a escala de pH e explica a liberação de gás cloro e cloraminas.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="custom-card role-card role-health">
-            <div class="stat-icon bg-danger-subtle text-danger mb-3">
-              <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-            <h5 class="fw-bold text-main">2. O Especialista em Saúde</h5>
-            <p class="small text-muted mb-0">
-              Pesquisa a toxicologia dos gases nos alvéolos pulmonares, define medidas de biossegurança, uso de luvas/máscaras apropriadas e elabora o protocolo de primeiros socorros caso ocorra acidente.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="custom-card role-card role-econ">
-            <div class="stat-icon bg-success-subtle text-success mb-3">
-              <i class="fa-solid fa-piggy-bank"></i>
-            </div>
-            <h5 class="fw-bold text-main">3. O Consultor Econômico</h5>
-            <p class="small text-muted mb-0">
-              Calcula o rendimento das diluições, pesquisa os preços médios nos supermercados e feiras de Imperatriz e prova financeiramente que a limpeza correta em duas etapas é mais barata que desperdiçar produtos.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="custom-card role-card role-comm">
-            <div class="stat-icon bg-secondary-subtle text-secondary mb-3">
-              <i class="fa-solid fa-bullhorn"></i>
-            </div>
-            <h5 class="fw-bold text-main">4. O Comunicador Social</h5>
-            <p class="small text-muted mb-0">
-              Garante que a linguagem seja acolhedora, respeitosa e clara, sem termos científicos complicados desnecessários, diagramando a cartilha e formatando a campanha para redes sociais e WhatsApp.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Etapas / Timeline -->
-      <h4 class="fw-bold mb-4 text-main text-center"><i class="fa-solid fa-timeline me-2 text-primary"></i>Fases de Execução da Missão</h4>
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="timeline-step">
-            <div class="timeline-number">1</div>
-            <h5 class="fw-bold text-main mb-2">Fase 1: Diagnóstico e Divisão de Funções</h5>
-            <p class="small text-muted">
-              Leiam com atenção o estudo de caso de Dona Francisca. Identifiquem as substâncias químicas mencionadas: água sanitária (hipoclorito de sódio em solução alcalina) e limpador de cerâmica (ácido muriático / clorídrico). Definam quem exercerá cada papel na equipe.
-            </p>
-          </div>
-
-          <div class="timeline-step">
-            <div class="timeline-number">2</div>
-            <h5 class="fw-bold text-main mb-2">Fase 2: Experimentação no Simulador Virtual e Pesquisa</h5>
-            <p class="small text-muted">
-              Utilizem o <strong>Simulador Químico Interativo</strong> desta WebQuest (abaixo) para testar diferentes combinações de saneantes caseiros. Consultem os recursos indicados (ANVISA, CFQ, SBQ) e anotem os produtos das reações químicas e os valores de pH.
-            </p>
-          </div>
-
-          <div class="timeline-step">
-            <div class="timeline-number">3</div>
-            <h5 class="fw-bold text-main mb-2">Fase 3: Elaboração dos Produtos Finais</h5>
-            <p class="small text-muted">
-              Reúnam as contribuições de cada especialista: montem a Cartilha Ilustrada, o roteiro da Campanha Digital contra desinformação e o Parecer Técnico com as equações balanceadas e o comparativo econômico.
-            </p>
-          </div>
-
-          <div class="timeline-step">
-            <div class="timeline-number">4</div>
-            <h5 class="fw-bold text-main mb-2">Fase 4: Socialização e Avaliação</h5>
-            <p class="small text-muted mb-0">
-              Apresentem os resultados em plenária para a turma e o professor de Química. As melhores cartilhas poderão ser impressas e distribuídas para as trabalhadoras da comunidade escolar!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 5: SIMULADOR INTERATIVO DE MISTURAS QUÍMICAS
-       ========================================================================== -->
-  <section id="simulador" class="section-wrapper">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-flask-vial me-1"></i> Laboratório Virtual</span>
-        <h2 class="section-title">Simulador Químico de Misturas Domésticas</h2>
-        <p class="section-desc mx-auto">
-          Selecione dois produtos comuns de limpeza para simular a reação química, conferir a equação balanceada, analisar a toxicidade dos gases gerados e obter a recomendação técnica da ANVISA.
-        </p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="simulator-card">
-            <div class="row g-3 align-items-center mb-4">
-              <div class="col-md-5">
-                <label for="prod1Select" class="form-label fw-bold small text-muted text-uppercase">
-                  <i class="fa-solid fa-bottle-droplet text-primary me-1"></i> Produto 1 (Frasco A)
-                </label>
-                <select id="prod1Select" class="form-select form-select-lg shadow-sm">
-                  <option value="" disabled>Selecione um produto...</option>
-                  <option value="sanitaria" selected>Água Sanitária (Hipoclorito de Sódio - NaClO)</option>
-                  <option value="desincrustante">Limpador de Cerâmica / Ácido Muriático (HCl)</option>
-                  <option value="vinagre">Vinagre de Álcool (Ácido Acético - CH₃COOH)</option>
-                  <option value="bicarbonato">Bicarbonato de Sódio (NaHCO₃)</option>
-                  <option value="amonia">Desinfetante Multiuso com Amônia (NH₃)</option>
-                  <option value="alcool">Álcool 70% (Etanol - C₂H₅OH)</option>
-                  <option value="oxigenada">Água Oxigenada (Peróxido de Hidrogênio - H₂O₂)</option>
-                  <option value="detergente">Detergente Neutro Comum</option>
-                </select>
-              </div>
-
-              <div class="col-md-2 text-center pt-md-4">
-                <div class="stat-icon bg-primary text-white mx-auto shadow-sm" style="width: 44px; height: 44px; font-size: 1.1rem;">
-                  <i class="fa-solid fa-plus"></i>
-                </div>
-              </div>
-
-              <div class="col-md-5">
-                <label for="prod2Select" class="form-label fw-bold small text-muted text-uppercase">
-                  <i class="fa-solid fa-bottle-droplet text-secondary me-1"></i> Produto 2 (Frasco B)
-                </label>
-                <select id="prod2Select" class="form-select form-select-lg shadow-sm">
-                  <option value="" disabled>Selecione outro produto...</option>
-                  <option value="sanitaria">Água Sanitária (Hipoclorito de Sódio - NaClO)</option>
-                  <option value="desincrustante" selected>Limpador de Cerâmica / Ácido Muriático (HCl)</option>
-                  <option value="vinagre">Vinagre de Álcool (Ácido Acético - CH₃COOH)</option>
-                  <option value="bicarbonato">Bicarbonato de Sódio (NaHCO₃)</option>
-                  <option value="amonia">Desinfetante Multiuso com Amônia (NH₃)</option>
-                  <option value="alcool">Álcool 70% (Etanol - C₂H₅OH)</option>
-                  <option value="oxigenada">Água Oxigenada (Peróxido de Hidrogênio - H₂O₂)</option>
-                  <option value="detergente">Detergente Neutro Comum</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Tela de Reação -->
-            <div id="reactionResult" class="reaction-screen">
-              <!-- Preenchido via script.js -->
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center mt-3 pt-2">
-              <span class="small text-muted"><i class="fa-solid fa-circle-exclamation me-1"></i> Apenas para fins educativos. Jamais reproduza misturas perigosas em ambiente real!</span>
-              <button id="btnResetSim" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
-                <i class="fa-solid fa-rotate-left me-1"></i> Limpar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Escala de pH no Cotidiano -->
-      <div class="mt-5 pt-3">
-        <h4 class="fw-bold text-main text-center mb-4"><i class="fa-solid fa-scale-unbalanced-flip me-2 text-primary"></i>A Escala de pH dos Produtos de Limpeza Domésticos</h4>
-        <div class="row g-2 text-center font-mono">
-          <div class="col-6 col-md-2">
-            <div class="p-3 rounded text-white" style="background-color: #b91c1c;">
-              <span class="d-block fw-bold fs-5">pH 1 ~ 2</span>
-              <small class="d-block fw-bold">Ácido Muriático</small>
-              <span style="font-size: 0.72rem;">Desincrustante ácido</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-2">
-            <div class="p-3 rounded text-white" style="background-color: #ea580c;">
-              <span class="d-block fw-bold fs-5">pH 2,5 ~ 3</span>
-              <small class="d-block fw-bold">Vinagre</small>
-              <span style="font-size: 0.72rem;">Ácido acético fraco</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-2">
-            <div class="p-3 rounded text-white" style="background-color: #10b981;">
-              <span class="d-block fw-bold fs-5">pH ~ 7</span>
-              <small class="d-block fw-bold">Detergente Neutro</small>
-              <span style="font-size: 0.72rem;">Tensoativos biodegradáveis</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-2">
-            <div class="p-3 rounded text-white" style="background-color: #0284c7;">
-              <span class="d-block fw-bold fs-5">pH ~ 8,5</span>
-              <small class="d-block fw-bold">Bicarbonato</small>
-              <span style="font-size: 0.72rem;">Base fraca suave</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-2">
-            <div class="p-3 rounded text-white" style="background-color: #4f46e5;">
-              <span class="d-block fw-bold fs-5">pH 10 ~ 11</span>
-              <small class="d-block fw-bold">Sabão / Amônia</small>
-              <span style="font-size: 0.72rem;">Alcalino desengordurante</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-2">
-            <div class="p-3 rounded text-white" style="background-color: #6b21a8;">
-              <span class="d-block fw-bold fs-5">pH 11,5 ~ 13</span>
-              <small class="d-block fw-bold">Água Sanitária</small>
-              <span style="font-size: 0.72rem;">Hipoclorito alcalinizado</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 6: RECURSOS E FONTES DE PESQUISA
-       ========================================================================== -->
-  <section id="recursos" class="section-wrapper bg-subtle">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-folder-open me-1"></i> Biblioteca de Apoio</span>
-        <h2 class="section-title">Recursos Confiáveis para a Investigação</h2>
-        <p class="section-desc mx-auto">
-          Utilizem fontes científicas e governamentais verificadas para fundamentar a cartilha e o relatório do seu grupo.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-primary-subtle text-primary mb-3">
-              <i class="fa-solid fa-building-columns"></i>
-            </div>
-            <h5 class="fw-bold text-main">ANVISA - Saneantes</h5>
-            <p class="small text-muted">
-              Recomendações técnicas oficiais sobre o uso seguro de produtos desinfetantes e os riscos das misturas caseiras.
-            </p>
-            <a href="https://www.gov.br/anvisa/pt-br/assuntos/saneantes" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill">
-              Acessar Portal ANVISA <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-danger-subtle text-danger mb-3">
-              <i class="fa-solid fa-vial-circle-check"></i>
-            </div>
-            <h5 class="fw-bold text-main">Conselho Federal de Química</h5>
-            <p class="small text-muted">
-              Campanha "Química do Bem": Notas de esclarecimento do CFQ desfazendo mitos das redes sociais e orientando sobre reações perigosas.
-            </p>
-            <a href="https://cfq.org.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm rounded-pill">
-              Acessar Portal CFQ <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-success-subtle text-success mb-3">
-              <i class="fa-solid fa-laptop-code"></i>
-            </div>
-            <h5 class="fw-bold text-main">Simulador PhET - Escala de pH</h5>
-            <p class="small text-muted">
-              Simulação interativa gratuita da Universidade do Colorado para testar o pH de produtos aquosos e compreender íons H⁺ e OH⁻.
-            </p>
-            <a href="https://phet.colorado.edu/pt_BR/simulations/ph-scale" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm rounded-pill">
-              Abrir Simulador PhET <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-info-subtle text-info mb-3">
-              <i class="fa-solid fa-book-journal-whills"></i>
-            </div>
-            <h5 class="fw-bold text-main">Química Nova na Escola (SBQ)</h5>
-            <p class="small text-muted">
-              Artigo didático da Sociedade Brasileira de Química: <em>"Água sanitária: uma visão química e social dos produtos clorados de limpeza"</em>.
-            </p>
-            <a href="http://qnesc.sbq.org.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm rounded-pill">
-              Explorar Artigos QNESC <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-warning-subtle text-warning mb-3">
-              <i class="fa-solid fa-phone-volume"></i>
-            </div>
-            <h5 class="fw-bold text-main">Disque-Intoxicação (ANVISA)</h5>
-            <p class="small text-muted">
-              Linha gratuita de emergência <strong>0800 722 6001</strong> para orientação médica imediata em casos de exposição a agentes tóxicos.
-            </p>
-            <span class="badge bg-warning text-dark font-mono py-2 px-3 rounded-pill">Ligue: 0800-722-6001</span>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="custom-card">
-            <div class="stat-icon bg-secondary-subtle text-secondary mb-3">
-              <i class="fa-solid fa-file-invoice"></i>
-            </div>
-            <h5 class="fw-bold text-main">Fichas de Segurança (FISPQ)</h5>
-            <p class="small text-muted">
-              Aprenda a ler a FISPQ de produtos químicos comerciais e localizar pictogramas de perigo GHS da ABNT.
-            </p>
-            <span class="badge bg-secondary-subtle text-muted font-mono py-2 px-3 rounded-pill">Norma ABNT NBR 14725</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO INTERATIVA: CHECKLIST DA MISSÃO & QUIZ DE FIXAÇÃO
+       MAPA DA WEBQUEST (ACESSO DIRETO ÀS SEÇÕES)
        ========================================================================== -->
   <section class="section-wrapper">
     <div class="container px-lg-5">
-      <div class="row g-5">
-        <!-- Checklist do Estudante -->
-        <div class="col-lg-6">
-          <div class="d-flex align-items-center justify-content-between mb-3">
-            <h4 class="fw-bold text-main mb-0"><i class="fa-solid fa-list-check me-2 text-primary"></i>Checklist da Sua Equipe</h4>
-            <button id="btnResetTasks" class="btn btn-sm btn-link text-muted text-decoration-none">Reiniciar</button>
-          </div>
-          <p class="small text-muted mb-3">Acompanhe o andamento das etapas da sua WebQuest. O progresso é salvo automaticamente no seu navegador:</p>
-
-          <div class="progress mb-3" style="height: 10px; border-radius: 9999px;">
-            <div id="taskProgressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div id="taskProgressText" class="small text-muted font-mono text-end mb-4">0 de 6 etapas concluídas (0%)</div>
-
-          <label class="checklist-item">
-            <input type="checkbox" class="task-checkbox" data-index="0">
-            <div>
-              <strong class="d-block text-main">1. Leitura Completa do Caso de Dona Francisca</strong>
-              <small class="text-muted">Compreender a narrativa, o contexto de Imperatriz e o dilema vivenciado.</small>
-            </div>
-          </label>
-
-          <label class="checklist-item">
-            <input type="checkbox" class="task-checkbox" data-index="1">
-            <div>
-              <strong class="d-block text-main">2. Distribuição dos 4 Papéis do Grupo</strong>
-              <small class="text-muted">Químico, Especialista em Saúde, Consultor Econômico e Comunicador Social.</small>
-            </div>
-          </label>
-
-          <label class="checklist-item">
-            <input type="checkbox" class="task-checkbox" data-index="2">
-            <div>
-              <strong class="d-block text-main">3. Experimentação no Simulador Químico</strong>
-              <small class="text-muted">Testar Água Sanitária + Desincrustante e Vinagre + Bicarbonato para coletar dados.</small>
-            </div>
-          </label>
-
-          <label class="checklist-item">
-            <input type="checkbox" class="task-checkbox" data-index="3">
-            <div>
-              <strong class="d-block text-main">4. Redação do Guia / Cartilha Ilustrada</strong>
-              <small class="text-muted">Formatar a tabela de compatibilidade e as receitas seguras de baixo custo.</small>
-            </div>
-          </label>
-
-          <label class="checklist-item">
-            <input type="checkbox" class="task-checkbox" data-index="4">
-            <div>
-              <strong class="d-block text-main">5. Elaboração da Campanha Digital contra Mitos</strong>
-              <small class="text-muted">Desenvolver o roteiro ou carrossel desmontando as misturas perigosas das redes.</small>
-            </div>
-          </label>
-
-          <label class="checklist-item">
-            <input type="checkbox" class="task-checkbox" data-index="5">
-            <div>
-              <strong class="d-block text-main">6. Parecer Técnico com Equações Balanceadas</strong>
-              <small class="text-muted">Fundamentar os conceitos de pH e redox para a avaliação do professor.</small>
-            </div>
-          </label>
-        </div>
-
-        <!-- Quiz Rápido -->
-        <div class="col-lg-6" id="quiz">
-          <h4 class="fw-bold text-main mb-2"><i class="fa-solid fa-spell-check me-2 text-warning"></i>Quiz Rápido de Fixação Pedagógica</h4>
-          <p class="small text-muted mb-4">Teste seus conhecimentos antes de finalizar os produtos da sua equipe:</p>
-
-          <div id="quizContainer">
-            <!-- Gerado dinamicamente pelo script.js -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 7: AVALIAÇÃO (RUBRICA PEDAGÓGICA)
-       ========================================================================== -->
-  <section id="avaliacao" class="section-wrapper bg-subtle">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-award me-1"></i> Critérios Transparentes</span>
-        <h2 class="section-title">Matriz de Avaliação (Rubrica)</h2>
+      <div class="section-header text-center mx-auto mb-5">
+        <span class="section-tag"><i class="fa-solid fa-map me-1"></i> Mapa de Navegação</span>
+        <h2 class="section-title">Explore as Etapas da WebQuest</h2>
         <p class="section-desc mx-auto">
-          A avaliação valorizará a coerência científica, a utilidade social da solução para as diaristas e a qualidade comunicativa dos materiais produzidos.
-        </p>
-      </div>
-
-      <div class="table-responsive">
-        <table class="rubric-table">
-          <thead>
-            <tr>
-              <th style="width: 20%;">Critério de Avaliação</th>
-              <th style="width: 20%;" class="text-danger">Insuficiente (1 pt)</th>
-              <th style="width: 20%;" class="text-warning">Regular (2 pts)</th>
-              <th style="width: 20%;" class="text-primary">Bom (3 pts)</th>
-              <th style="width: 20%;" class="text-success">Excelente (4 pts)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="fw-bold">
-                <i class="fa-solid fa-atom text-primary me-1"></i> Domínio Químico e Fundamentação
-              </td>
-              <td>Não identifica as substâncias nem as reações. Considera erroneamente que toda mistura é neutralização inofensiva.</td>
-              <td>Identifica as substâncias envolvidas, mas comete erros nas equações ou na explicação da toxicidade do Cl₂.</td>
-              <td>Apresenta equações balanceadas corretas e diferencia neutralização ácido-base de óxido-redução.</td>
-              <td>Explica com rigor o equilíbrio químico do hipoclorito, o papel do pH, equações redox balanceadas e mecanismos celulares da toxicidade.</td>
-            </tr>
-            <tr>
-              <td class="fw-bold">
-                <i class="fa-solid fa-shield-halved text-success me-1"></i> Viabilidade Prática e Biossegurança
-              </td>
-              <td>Propõe soluções caras ou perigosas que não resolvem o problema financeiro de Dona Francisca.</td>
-              <td>Propõe evitar misturas, mas não oferece alternativas concretas ou de baixo custo para as manchas difíceis.</td>
-              <td>Apresenta receitas seguras (água e sabão, diluição correta) com estimativa realista de custos.</td>
-              <td>Plano completo de limpeza em duas etapas (limpeza mecânica + desinfecção clorada correta), custos detalhados e protocolo de primeiros socorros.</td>
-            </tr>
-            <tr>
-              <td class="fw-bold">
-                <i class="fa-solid fa-comments text-info me-1"></i> Linguagem, Empatia e Comunicação
-              </td>
-              <td>Usa jargões inacessíveis ou adota postura de julgamento e culpa em relação às diaristas.</td>
-              <td>Linguagem excessivamente técnica ou material visualmente poluído e de difícil compreensão.</td>
-              <td>Comunicação clara, empática e acessível, com boa diagramação e apelo visual adequado.</td>
-              <td>Comunicação exemplar: cartilha cativante, empática, valorização da dignidade do trabalho doméstico e combate eficaz à desinformação digital.</td>
-            </tr>
-            <tr>
-              <td class="fw-bold">
-                <i class="fa-solid fa-users-gear text-secondary me-1"></i> Trabalho em Equipe e Conclusão
-              </td>
-              <td>Apenas um membro trabalhou ou a equipe não cumpriu os prazos e entregáveis combinados.</td>
-              <td>Divisão desigual do trabalho e produtos incompletos ou desconexos entre si.</td>
-              <td>Boa divisão de papéis e entrega de todos os três produtos solicitados com boa qualidade.</td>
-              <td>Cooperação impecável: integração perfeita entre os 4 especialistas, cumprimento rigoroso e liderança colaborativa.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 8: CONCLUSÃO
-       ========================================================================== -->
-  <section id="conclusao" class="section-wrapper">
-    <div class="container px-lg-5">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-3">
-            <i class="fa-solid fa-lightbulb me-1"></i> Aprendizagem Significativa
-          </div>
-          <h2 class="section-title">Conclusão: A Ciência a Serviço da Vida</h2>
-          <p class="text-muted">
-            Ao concluir esta WebQuest, vocês não apenas resolveram exercícios teóricos de Química sobre ácidos, bases, reações redox e equilíbrio químico, mas também atuaram como verdadeiros cidadãos transformadores da realidade social de Imperatriz e do Maranhão.
-          </p>
-          <p class="text-muted">
-            A história de Dona Francisca e Mariana revela que o conhecimento científico não deve ficar restrito às paredes da sala de aula: ele é um instrumento de emancipação, de defesa da saúde e de valorização das trabalhadoras que constroem nossa sociedade diariamente.
-          </p>
-          <div class="p-3 rounded-3 bg-subtle border border-primary-subtle mt-4">
-            <h6 class="fw-bold text-primary mb-1"><i class="fa-solid fa-quote-left me-2"></i>Reflexão Final</h6>
-            <p class="small text-main mb-0 fst-italic">
-              "Ensinar Química não é apenas memorizar fórmulas, mas capacitar o ser humano a ler o mundo material ao seu redor e tomar decisões éticas que preservem a vida."
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="custom-card text-center p-4">
-            <div class="stat-icon bg-success text-white mx-auto mb-3" style="width: 64px; height: 64px; font-size: 1.8rem;">
-              <i class="fa-solid fa-award"></i>
-            </div>
-            <h4 class="fw-bold text-main mb-2">Missão Cumprida!</h4>
-            <p class="small text-muted mb-4">
-              Parabéns pelo empenho na investigação! Certifiquem-se de que os materiais produzidos cheguem até quem mais precisa: compartilhem a cartilha com as famílias e nas redes da escola.
-            </p>
-            <div class="d-flex justify-content-center gap-3">
-              <a href="#hero" class="btn btn-outline-primary rounded-pill px-4">
-                <i class="fa-solid fa-arrow-up me-1"></i> Voltar ao Topo
-              </a>
-              <button onclick="window.print()" class="btn btn-primary rounded-pill px-4">
-                <i class="fa-solid fa-file-pdf me-1"></i> Salvar Relatório em PDF
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SEÇÃO 9: GUIA DO PROFESSOR & CRÉDITOS
-       ========================================================================== -->
-  <section id="professor" class="section-wrapper bg-subtle">
-    <div class="container px-lg-5">
-      <div class="section-header text-center mx-auto">
-        <span class="section-tag"><i class="fa-solid fa-chalkboard-user me-1"></i> Informações Pedagógicas</span>
-        <h2 class="section-title">Guia Docente & Créditos</h2>
-        <p class="section-desc mx-auto">
-          Orientações metodológicas para professores de Química aplicarem esta WebQuest no Ensino Médio de acordo com a BNCC e o Currículo do Maranhão.
+          Cada seção possui sua página individual detalhada. Navegue no seu próprio ritmo ou siga o fluxo pedagógico passo a passo:
         </p>
       </div>
 
       <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="custom-card h-100">
-            <h5 class="fw-bold text-main mb-3"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>Alinhamento à BNCC (Ciências da Natureza)</h5>
-            
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary font-mono mb-1">EM13CNT101</span>
-              <p class="small text-muted mb-0">Analisar e representar as transformações e conservações em sistemas que envolvam quantidade de matéria, energia e movimento para prever reações químicas e seus impactos socioambientais.</p>
-            </div>
-
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary font-mono mb-1">EM13CNT104</span>
-              <p class="small text-muted mb-0">Avaliar os benefícios e os riscos à saúde e ao ambiente considerando a composição de produtos de uso doméstico e industrial.</p>
-            </div>
-
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary font-mono mb-1">EM13CNT301</span>
-              <p class="small text-muted mb-0">Construir questões, elaborar hipóteses, previsões e estimativas, empregando instrumentos de medição e simuladores para validar soluções científicas.</p>
-            </div>
-
+        <!-- 1. O Caso -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
             <div>
-              <span class="badge bg-primary-subtle text-primary font-mono mb-1">EM13CNT307</span>
-              <p class="small text-muted mb-0">Analisar as propriedades dos materiais para avaliar a adequação de seu uso em diferentes aplicações cotidianas e propor alternativas sustentáveis.</p>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-primary-subtle text-primary"><i class="fa-solid fa-book-open"></i></span>
+                <span class="badge bg-primary-subtle text-primary font-mono">Página 1</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">O Estudo de Caso</h5>
+              <p class="small text-muted mb-3">
+                A narrativa completa de Dona Francisca e Mariana em Imperatriz-MA, os diálogos e os critérios de Herreid (1998).
+              </p>
             </div>
+            <a href="caso.html" class="btn btn-outline-primary btn-sm rounded-pill w-100">
+              Ler o Estudo de Caso <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="custom-card h-100">
-            <h5 class="fw-bold text-main mb-3"><i class="fa-solid fa-bookmark text-secondary me-2"></i>Fundamentação Teórica & Metodológica</h5>
-            
-            <p class="small text-muted">
-              Esta WebQuest foi estruturada a partir da metodologia de <strong>Estudos de Caso no Ensino de Química</strong> fundamentada por Sá & Queiroz (2010) e nos 11 critérios de Herreid (1998) para a construção de narrativas investigativas que produzem empatia e forçam tomadas de decisão sob conflito real.
-            </p>
-
-            <h6 class="fw-bold text-main mb-2 mt-4"><i class="fa-solid fa-book me-2 text-primary"></i>Referências Bibliográficas:</h6>
-            <ul class="small text-muted ps-3 mb-0">
-              <li class="mb-1"><strong>HERREID, C. F.</strong> What makes a good case? <em>Journal of College Science Teaching</em>, v. 27, n. 3, p. 163-165, 1998.</li>
-              <li class="mb-1"><strong>SÁ, L. P.; QUEIROZ, S. L.</strong> <em>Estudo de casos no ensino de química</em>. Campinas: Editora Átomo, 2010.</li>
-              <li class="mb-1"><strong>ANVISA</strong> - Agência Nacional de Vigilância Sanitária. <em>Manual de Saneantes Domissanitários e Prevenção de Intoxicações</em>. Brasília: Ministério da Saúde, 2021.</li>
-              <li class="mb-1"><strong>DODGE, B.</strong> Some thoughts about WebQuests. <em>The Distance Educator</em>, v. 1, n. 3, p. 12-15, 1995.</li>
-              <li class="mb-1"><strong>MARANHÃO</strong>. Secretaria de Estado da Educação (SEDUC). <em>Documento Curricular do Território Maranhense para o Ensino Médio: Área de Ciências da Natureza</em>. São Luís: SEDUC-MA, 2021.</li>
-            </ul>
+        <!-- 2. Introdução -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-warning-subtle text-warning"><i class="fa-solid fa-lightbulb"></i></span>
+                <span class="badge bg-warning-subtle text-warning font-mono">Página 2</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">Introdução</h5>
+              <p class="small text-muted mb-3">
+                Contextualização dos riscos invisíveis de intoxicação e da epidemia de mitos nas redes sociais.
+              </p>
+            </div>
+            <a href="introducao.html" class="btn btn-outline-warning btn-sm rounded-pill w-100">
+              Ver Introdução <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
-      </div>
 
-      <!-- Caixa de Créditos do Autor -->
-      <div class="case-story-card mt-5 p-4 text-center">
-        <div class="d-flex align-items-center justify-content-center gap-3 mb-2">
-          <div class="stat-icon bg-primary text-white" style="width: 48px; height: 48px; font-size: 1.3rem;">
-            <i class="fa-solid fa-user-graduate"></i>
-          </div>
-          <div class="text-start">
-            <h5 class="fw-bold mb-0 text-main">Alessandro Monteiro de Sousa</h5>
-            <small class="text-muted">Autor & Acadêmico Responsável pelo Estudo de Caso</small>
+        <!-- 3. Tarefa -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-success-subtle text-success"><i class="fa-solid fa-list-check"></i></span>
+                <span class="badge bg-success-subtle text-success font-mono">Página 3</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">A Tarefa (A Missão)</h5>
+              <p class="small text-muted mb-3">
+                Os 3 produtos que sua equipe deverá produzir: Cartilha Ilustrada, Campanha Digital e Parecer Técnico.
+              </p>
+            </div>
+            <a href="tarefa.html" class="btn btn-outline-success btn-sm rounded-pill w-100">
+              Conhecer a Missão <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
           </div>
         </div>
-        <p class="small text-muted max-w-700 mx-auto mt-3 mb-0">
-          Trabalho pedagógico desenvolvido para a formação e qualificação do Ensino de Química no Ensino Médio, contextualizado na realidade socioeconômica de Imperatriz e do estado do Maranhão.
-        </p>
+
+        <!-- 4. Processo -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-info-subtle text-info"><i class="fa-solid fa-gears"></i></span>
+                <span class="badge bg-info-subtle text-info font-mono">Página 4</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">O Processo</h5>
+              <p class="small text-muted mb-3">
+                Divisão em 4 papéis cooperativos, linha do tempo em 4 fases e checklist interativo com barra de progresso.
+              </p>
+            </div>
+            <a href="processo.html" class="btn btn-outline-info btn-sm rounded-pill w-100">
+              Ver Etapas e Papéis <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Simulador -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-danger-subtle text-danger"><i class="fa-solid fa-atom"></i></span>
+                <span class="badge bg-danger-subtle text-danger font-mono">Página 5</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">Simulador Químico</h5>
+              <p class="small text-muted mb-3">
+                Laboratório virtual de misturas saneantes, cálculo de gases tóxicos e a escala de pH do cotidiano.
+              </p>
+            </div>
+            <a href="simulador.html" class="btn btn-outline-danger btn-sm rounded-pill w-100">
+              Abrir Simulador <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Recursos -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-secondary-subtle text-secondary"><i class="fa-solid fa-link"></i></span>
+                <span class="badge bg-secondary-subtle text-secondary font-mono">Página 6</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">Recursos & Links</h5>
+              <p class="small text-muted mb-3">
+                Fontes oficiais: ANVISA, Conselho Federal de Química (CFQ), simuladores PhET e artigos da SBQ.
+              </p>
+            </div>
+            <a href="recursos.html" class="btn btn-outline-secondary btn-sm rounded-pill w-100">
+              Consultar Recursos <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Avaliação -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-primary-subtle text-primary"><i class="fa-solid fa-clipboard-check"></i></span>
+                <span class="badge bg-primary-subtle text-primary font-mono">Página 7</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">Avaliação & Quiz</h5>
+              <p class="small text-muted mb-3">
+                Matriz de avaliação detalhada (rubrica) e quiz de fixação pedagógica com correção instantânea.
+              </p>
+            </div>
+            <a href="avaliacao.html" class="btn btn-outline-primary btn-sm rounded-pill w-100">
+              Ver Rubrica e Quiz <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Conclusão -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-success-subtle text-success"><i class="fa-solid fa-flag-checkered"></i></span>
+                <span class="badge bg-success-subtle text-success font-mono">Página 8</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">Conclusão</h5>
+              <p class="small text-muted mb-3">
+                Reflexão final sobre a importância da Química na preservação da vida e no exercício da cidadania.
+              </p>
+            </div>
+            <a href="conclusao.html" class="btn btn-outline-success btn-sm rounded-pill w-100">
+              Ler Conclusão <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. Guia Docente -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="stat-icon bg-dark-subtle text-purple"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="badge bg-dark-subtle text-muted font-mono">Página 9</span>
+              </div>
+              <h5 class="fw-bold text-main mb-2">Guia Docente & BNCC</h5>
+              <p class="small text-muted mb-3">
+                Alinhamento com a BNCC, Documento Curricular do Maranhão, orientações pedagógicas e referências.
+              </p>
+            </div>
+            <a href="professor.html" class="btn btn-outline-dark btn-sm rounded-pill w-100">
+              Área do Professor <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

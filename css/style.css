@@ -585,6 +585,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Page Headers for Multi-Page Architecture
+   ========================================================================== */
+.page-header-banner {
+  padding: 6.5rem 0 3rem;
+  background: radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(13, 148, 136, 0.08) 0%, transparent 40%),
+              var(--bg-body);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+}
+
+.page-nav-controls {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
+/* ==========================================================================
    Print Styles
    ========================================================================== */
 @media print {
