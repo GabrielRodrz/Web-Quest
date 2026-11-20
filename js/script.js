@@ -200,7 +200,7 @@ function initSimulator() {
         </div>
       `;
     } else if (data.status === "warning") {
-      badgeClass = "bg-warning text-dark";
+      badgeClass = "bg-warning text-white";
       borderClass = "border-warning";
       liquidColor = "#b45c18"; // Terracota / Âmbar
       animationEffect = `
@@ -508,7 +508,7 @@ function launchConfetti() {
   const width = canvas.width = window.innerWidth;
   const height = canvas.height = window.innerHeight;
 
-  const colors = ['#0284c7', '#0d9488', '#f59e0b', '#10b981', '#8b5cf6', '#ec4899'];
+  const colors = ['#b45c18', '#561e0a', '#c47d37', '#1e5e3a', '#dfa86c', '#8a3c10'];
   const particles = [];
   const particleCount = 45;
 

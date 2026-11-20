@@ -76,8 +76,8 @@
       <div class="col-lg-8">
         <div class="case-story-card">
           <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
-            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold">
-              <i class="fa-solid fa-book-open me-1"></i> Texto da História
+            <span class="editorial-tag">
+              <i class="fa-solid fa-book-open"></i> Texto da História
             </span>
             <span class="small text-muted font-mono"><i class="fa-solid fa-clock me-1"></i> Leitura rápida: ~3 min</span>
           </div>
@@ -88,7 +88,7 @@
           <div class="case-image-wrapper mb-4 position-relative overflow-hidden rounded-4 border border-secondary-subtle shadow-sm">
             <img src="assets/caso-dona-francisca.jpg" alt="Dona Francisca e os produtos de limpeza em Imperatriz-MA" class="img-fluid w-100 object-fit-cover" style="max-height: 340px;">
             <div class="p-2 bg-light border-top text-center small text-muted">
-              <i class="fa-solid fa-camera me-1 text-primary"></i> <em>Cenário do estudo de caso: o trabalho diário de limpeza, a alta dos preços e os riscos das misturas em Imperatriz-MA.</em>
+              <i class="fa-solid fa-camera me-1 text-secondary"></i> <em>Cenário do estudo de caso: o trabalho diário de limpeza, a alta dos preços e os riscos das misturas em Imperatriz-MA.</em>
             </div>
           </div>
 
@@ -101,12 +101,12 @@
           </p>
 
           <div class="dialogue-bubble">
-            <div class="dialogue-speaker"><i class="fa-solid fa-user me-1 text-warning"></i> Dona Helena (Proprietária):</div>
+            <div class="dialogue-speaker"><i class="fa-solid fa-user me-1 text-secondary"></i> Dona Helena (Proprietária):</div>
             <p class="mb-0 fst-italic">"— Francisca, preciso que você retire todas essas manchas. Já tentei vários produtos e nenhum resolveu."</p>
           </div>
 
           <div class="dialogue-bubble">
-            <div class="dialogue-speaker"><i class="fa-solid fa-spray-can-sparkles me-1 text-primary"></i> Dona Francisca (Diarista):</div>
+            <div class="dialogue-speaker"><i class="fa-solid fa-spray-can-sparkles me-1 text-secondary"></i> Dona Francisca (Diarista):</div>
             <p class="mb-0 fst-italic">"— Pode deixar, dona Helena. Vi uma receita na internet que promete remover até as sujeiras mais difíceis. Vou experimentar hoje."</p>
           </div>
 
@@ -114,8 +114,11 @@
             Durante a limpeza, Francisca utilizou <strong>água sanitária</strong> e, em seguida, acrescentou um <strong>limpador de cerâmica</strong> (produto ácido para pisos) para tentar potencializar a remoção das manchas. Ela acreditava que a combinação dos dois produtos aumentaria a eficiência da limpeza, sem imaginar que poderia ser perigoso.
           </p>
 
-          <div class="p-3 my-3 rounded-3 bg-danger-subtle border border-danger text-danger">
-            <strong>⚠️ O Susto:</strong> Poucos instantes depois, percebeu um odor muito forte e irritante. Começou a sentir ardência nos olhos, tosse intensa e muita dificuldade para respirar. Assustada, abandonou o banheiro correndo e procurou ajuda.
+          <div class="dialogue-bubble danger my-3">
+            <div class="dialogue-speaker"><i class="fa-solid fa-triangle-exclamation me-1 text-danger"></i> O Susto no Banheiro:</div>
+            <p class="mb-0 text-main">
+              Poucos instantes depois, percebeu um odor muito forte e irritante. Começou a sentir ardência nos olhos, tosse intensa e muita dificuldade para respirar. Assustada, abandonou o banheiro correndo e procurou ajuda.
+            </p>
           </div>
 
           <p class="fs-6">
@@ -128,7 +131,7 @@
           </div>
 
           <div class="dialogue-bubble">
-            <div class="dialogue-speaker"><i class="fa-solid fa-spray-can-sparkles me-1 text-primary"></i> Dona Francisca (ainda tossindo):</div>
+            <div class="dialogue-speaker"><i class="fa-solid fa-spray-can-sparkles me-1 text-secondary"></i> Dona Francisca (ainda tossindo):</div>
             <p class="mb-0 fst-italic">"— Misturei água sanitária com um produto para tirar manchas. Vi várias pessoas fazendo isso na internet. Achei que não teria problema."</p>
           </div>
 
@@ -141,7 +144,7 @@
           </p>
 
           <div class="dialogue-bubble">
-            <div class="dialogue-speaker"><i class="fa-solid fa-graduation-cap me-1 text-info"></i> Mariana ao Professor de Química:</div>
+            <div class="dialogue-speaker"><i class="fa-solid fa-graduation-cap me-1 text-secondary"></i> Mariana ao Professor de Química:</div>
             <p class="mb-0 fst-italic">"— Professor, por que misturar produtos de limpeza pode ser tão perigoso, se eles são utilizados diariamente em nossas casas?"</p>
           </div>
 
@@ -163,7 +166,7 @@
           </p>
 
           <div class="dialogue-bubble">
-            <div class="dialogue-speaker"><i class="fa-solid fa-heart me-1 text-warning"></i> Dona Francisca:</div>
+            <div class="dialogue-speaker"><i class="fa-solid fa-heart me-1 text-secondary"></i> Dona Francisca:</div>
             <p class="mb-0 fst-italic">"— Minha filha, eu entendo o perigo, mas os produtos estão caros e meus clientes exigem uma limpeza rápida e eficiente. Como vou trabalhar sem gastar tanto?"</p>
           </div>
 
@@ -172,7 +175,7 @@
           </p>
 
           <!-- O Grande Dilema -->
-          <div class="p-4 my-4 rounded-4 bg-primary-subtle border border-primary">
+          <div class="custom-card my-4 p-4" style="background-color: var(--secondary-subtle); border: 1px solid var(--secondary-border);">
             <h5 class="fw-bold text-main mb-2">🤔 E agora? Se você estivesse no lugar de Mariana:</h5>
             <p class="text-main mb-0">
               Que solução você proporia para ajudar sua mãe e as diaristas a realizar uma limpeza eficiente, econômica e segura? Como os conhecimentos de Química podem ajudar nessa decisão?
@@ -184,8 +187,8 @@
       <!-- Barra Lateral Descomplicada -->
       <div class="col-lg-4">
         <!-- Resumo Rápido -->
-        <div class="custom-card mb-4 border-top border-4 border-danger">
-          <h5 class="fw-bold mb-3 text-main"><i class="fa-solid fa-bolt me-2 text-danger"></i>Resumo do Acidente</h5>
+        <div class="custom-card mb-4">
+          <h5 class="fw-bold mb-3 text-main"><i class="fa-solid fa-bolt me-2 text-secondary"></i>Resumo do Acidente</h5>
           
           <div class="mb-2 pb-2 border-bottom border-secondary-subtle">
             <small class="text-muted d-block">📍 Onde aconteceu:</small>
@@ -194,12 +197,12 @@
 
           <div class="mb-2 pb-2 border-bottom border-secondary-subtle">
             <small class="text-muted d-block">🧴 O que foi misturado:</small>
-            <strong class="text-danger small">Água Sanitária + Limpador de Cerâmica</strong>
+            <strong class="text-main small">Água Sanitária + Limpador de Cerâmica</strong>
           </div>
 
           <div class="mb-2 pb-2 border-bottom border-secondary-subtle">
             <small class="text-muted d-block">💨 Gás perigoso que saiu:</small>
-            <span class="badge bg-danger text-white">Gás Cloro (Cl₂)</span>
+            <span class="editorial-badge" style="background-color: var(--danger-subtle); color: var(--danger-custom); border-color: var(--danger-border);">Gás Cloro (Cl₂)</span>
           </div>
 
           <div>
@@ -209,21 +212,21 @@
         </div>
 
         <!-- Quem é quem -->
-        <div class="custom-card border-top border-4 border-primary">
-          <h5 class="fw-bold mb-3 text-main"><i class="fa-solid fa-users me-2 text-primary"></i>Quem é Quem</h5>
+        <div class="custom-card">
+          <h5 class="fw-bold mb-3 text-main"><i class="fa-solid fa-users me-2 text-secondary"></i>Quem é Quem</h5>
           
           <div class="mb-3">
-            <strong class="text-primary d-block">🧕 Dona Francisca (45 anos)</strong>
+            <strong class="text-main d-block">🧕 Dona Francisca (45 anos)</strong>
             <small class="text-muted">Diarista há 15 anos. Trabalhadora dedicada, preocupada com a alta dos preços dos produtos.</small>
           </div>
 
           <div class="mb-3">
-            <strong class="text-success d-block">👧 Mariana (Filha)</strong>
+            <strong class="text-main d-block">👧 Mariana (Filha)</strong>
             <small class="text-muted">Estudante do 3º ano do Ensino Médio. Percebeu o perigo e buscou a ciência para ajudar.</small>
           </div>
 
           <div>
-            <strong class="text-info d-block">👨‍🏫 Professor de Química</strong>
+            <strong class="text-main d-block">👨‍🏫 Professor de Química</strong>
             <small class="text-muted">Mostra que misturar produtos domésticos não é brincadeira e ensina a limpar com segurança.</small>
           </div>
         </div>

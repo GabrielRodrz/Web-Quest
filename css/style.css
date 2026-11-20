@@ -302,6 +302,110 @@ h5, h6 {
   transform: translateY(-2px);
 }
 
+/* Numeração Editorial Serif (Estilo Oprah Foundation) */
+.step-number {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--secondary);
+  letter-spacing: -0.02em;
+}
+
+.editorial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--secondary-subtle);
+  color: var(--secondary);
+  border: 1px solid var(--secondary-border);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+}
+
+.editorial-badge {
+  display: inline-block;
+  background-color: var(--secondary-subtle);
+  color: var(--secondary);
+  border: 1px solid var(--secondary-border);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+}
+
+.editorial-badge-primary {
+  background-color: var(--primary-subtle);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+}
+
+/* Harmonização de Classes de Cores (Elimina Qualquer Resquício Neon/Punk) */
+.bg-warning, .badge.bg-warning {
+  background-color: var(--secondary) !important;
+  color: #ffffff !important;
+}
+.bg-warning-subtle {
+  background-color: var(--secondary-subtle) !important;
+  color: var(--secondary) !important;
+  border-color: var(--secondary-border) !important;
+}
+.text-warning {
+  color: var(--secondary) !important;
+}
+.border-warning {
+  border-color: var(--secondary-border) !important;
+}
+
+.bg-danger, .badge.bg-danger {
+  background-color: var(--danger-custom) !important;
+  color: #ffffff !important;
+}
+.bg-danger-subtle {
+  background-color: var(--danger-subtle) !important;
+  color: var(--danger-custom) !important;
+  border-color: var(--danger-border) !important;
+}
+.text-danger {
+  color: var(--danger-custom) !important;
+}
+.border-danger {
+  border-color: var(--danger-border) !important;
+}
+
+.bg-success, .badge.bg-success {
+  background-color: var(--success-custom) !important;
+  color: #ffffff !important;
+}
+.bg-success-subtle {
+  background-color: var(--success-subtle) !important;
+  color: var(--success-custom) !important;
+  border-color: var(--success-border) !important;
+}
+.text-success {
+  color: var(--success-custom) !important;
+}
+.border-success {
+  border-color: var(--success-border) !important;
+}
+
+.bg-info, .badge.bg-info, .bg-info-subtle {
+  background-color: var(--primary-subtle) !important;
+  color: var(--primary) !important;
+}
+.text-info {
+  color: var(--secondary) !important;
+}
+.border-info {
+  border-color: var(--secondary-border) !important;
+}
+
 .case-story-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
