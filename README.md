@@ -1,26 +1,24 @@
 # 🧪 WebQuest de Química: Limpeza ou Perigo? Os Riscos Invisíveis das Misturas Caseiras
 
-> **Uma WebQuest moderna, investigativa e responsiva para o Ensino Médio de Química**, fundamentada na metodologia de **Estudo de Caso** (Sá & Queiroz, 2010; Herreid, 1998) e alinhada à **BNCC** e ao **Currículo do Território Maranhense**.
+> **Uma WebQuest moderna, investigativa e responsiva para o Ensino Médio de Química**, fundamentada na metodologia de **Estudo de Caso** (Sá & Queiroz, 2010) e alinhada à **BNCC** e ao **Currículo do Território Maranhense**.
 
 * **Acadêmico / Autor:** Alessandro Monteiro de Sousa  
 * **Local de Contextualização:** Imperatriz, Maranhão  
-* **Público-Alvo:** 3º ano do Ensino Médio (ou 1º/2º anos em unidades temáticas de Reações Químicas, Ácidos, Bases, pH e Termoquímica/Redox)  
-* **Tecnologias:** HTML5 semântico, Bootstrap 5.3, JavaScript Moderno, CSS3 com variáveis e suporte nativo a Tema Claro/Escuro (Dark Mode).
+* **Público-Alvo:** 3º ano do Ensino Médio (ou unidades temáticas de Reações Químicas, Ácidos, Bases, pH e Redox)  
+* **Tecnologias:** HTML5 semântico, Bootstrap 5.3, JavaScript Moderno, CSS3 com tema escuro permanente e animações moleculares.
 
 ---
 
 ## 🌟 Destaques e Funcionalidades
 
-1. **Design Moderno e 100% Responsivo:**
-   - Adaptado perfeitamente para celulares, tablets, notebooks e computadores desktop.
-   - Alternador de **Modo Claro / Modo Escuro** com persistência no navegador.
-   - Tipografia limpa (*Plus Jakarta Sans* e *JetBrains Mono* para equações químicas).
-   - Botão para **Impressão / Salvar em PDF** formatado para uso em sala de aula sem computadores.
+1. **Design Moderno, Tema Escuro Permanente & 100% Responsivo:**
+   * Otimizado para celulares, tablets, notebooks e computadores.
+   * Paleta escura de alto contraste com estética científica elegante.
+   * Botão para **Impressão / Salvar em PDF** formatado para sala de aula.
 
 2. **O Estudo de Caso Completo:**
-   - Narrativa envolvente sobre Dona Francisca (diarista) e Mariana em Imperatriz-MA.
-   - Balões de diálogo dinâmicos e destaques visuais para os pontos críticos de segurança.
-   - Matriz com os **11 critérios de Herreid (1998)** para um bom caso investigativo.
+   * Narrativa realista sobre Dona Francisca (diarista), Dona Helena, Mariana e o Professor em Imperatriz-MA.
+   * Balões de diálogo dinâmicos e ficha rápida com os reagentes e sintomas.
 
 3. **🔬 Simulador Interativo de Misturas Domésticas:**
    - Permite que o estudante selecione dois produtos comuns de limpeza (Água Sanitária, Desincrustante Ácido, Vinagre, Bicarbonato, Amônia, Álcool 70%, Água Oxigenada, Detergente).
