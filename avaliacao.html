@@ -87,62 +87,160 @@
        CONTEÚDO PRINCIPAL
        ========================================================================== -->
   <main class="container px-lg-5 mb-5">
-    <!-- Matriz de Rubrica -->
     <h3 class="fw-bold mb-4 text-main text-center"><i class="fa-solid fa-table-list me-2 text-primary"></i>Matriz de Avaliação (Rubrica Analítica)</h3>
-    <div class="table-responsive mb-5">
-      <table class="rubric-table">
-        <thead>
-          <tr>
-            <th style="width: 22%;">Critério de Avaliação</th>
-            <th style="width: 19%;" class="text-danger">Insuficiente (1 pt)</th>
-            <th style="width: 19%;" class="text-warning">Regular (2 pts)</th>
-            <th style="width: 20%;" class="text-primary">Bom (3 pts)</th>
-            <th style="width: 20%;" class="text-success">Excelente (4 pts)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="fw-bold">
-              <i class="fa-solid fa-atom text-primary me-1"></i> Domínio Químico e Fundamentação (40%)
-            </td>
-            <td>Não identifica as substâncias nem as reações. Considera erroneamente que toda mistura é neutralização inofensiva.</td>
-            <td>Identifica as substâncias envolvidas, mas comete erros nas equações balanceadas ou na explicação da toxicidade do Cl₂.</td>
-            <td>Apresenta equações balanceadas corretas e diferencia neutralização ácido-base de óxido-redução.</td>
-            <td>Explica com rigor o equilíbrio químico do hipoclorito, o papel do pH, equações redox balanceadas e mecanismos celulares da toxicidade pulmonar.</td>
-          </tr>
-          <tr>
-            <td class="fw-bold">
-              <i class="fa-solid fa-shield-halved text-success me-1"></i> Viabilidade Prática e Biossegurança (25%)
-            </td>
-            <td>Propõe soluções caras ou perigosas que não resolvem o problema financeiro de Dona Francisca.</td>
-            <td>Propõe evitar misturas, mas não oferece alternativas concretas ou de baixo custo para as manchas difíceis.</td>
-            <td>Apresenta receitas seguras (água e sabão, diluição correta) com estimativa realista de custos.</td>
-            <td>Plano completo de limpeza em duas etapas (limpeza mecânica com tensoativo + desinfecção clorada correta), custos detalhados e protocolo de primeiros socorros.</td>
-          </tr>
-          <tr>
-            <td class="fw-bold">
-              <i class="fa-solid fa-comments text-info me-1"></i> Linguagem, Empatia e Comunicação (20%)
-            </td>
-            <td>Usa jargões inacessíveis ou adota postura de julgamento e culpa em relação às diaristas.</td>
-            <td>Linguagem excessivamente técnica ou material visualmente poluído e de difícil compreensão para pessoas leigas.</td>
-            <td>Comunicação clara, empática e acessível, com boa diagramação e apelo visual adequado.</td>
-            <td>Comunicação exemplar: cartilha cativante, empática, valorização da dignidade do trabalho doméstico e combate eficaz à desinformação digital.</td>
-          </tr>
-          <tr>
-            <td class="fw-bold">
-              <i class="fa-solid fa-users-gear text-secondary me-1"></i> Trabalho em Equipe e Organização (15%)
-            </td>
-            <td>Apenas um membro trabalhou ou a equipe não cumpriu os prazos e entregáveis combinados.</td>
-            <td>Divisão desigual do trabalho e produtos incompletos ou desconexos entre si.</td>
-            <td>Boa divisão de papéis e entrega de todos os três produtos solicitados com boa qualidade.</td>
-            <td>Cooperação impecável: integração perfeita entre os 4 especialistas, cumprimento rigoroso e liderança colaborativa.</td>
-          </tr>
-        </tbody>
-      </table>
+
+    <!-- VERSÃO DESKTOP (Tabela Completa em Telas Grandes) -->
+    <div class="d-none d-lg-block mb-5">
+      <div class="table-responsive">
+        <table class="rubric-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Critério de Avaliação</th>
+              <th style="width: 19%;" class="text-danger">Insuficiente (1 pt)</th>
+              <th style="width: 19%;" class="text-warning">Regular (2 pts)</th>
+              <th style="width: 20%;" class="text-primary">Bom (3 pts)</th>
+              <th style="width: 20%;" class="text-success">Excelente (4 pts)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">
+                <i class="fa-solid fa-atom text-primary me-1"></i> Domínio Químico (40%)
+              </td>
+              <td>Não identifica as substâncias nem as reações. Considera erroneamente que toda mistura é neutralização inofensiva.</td>
+              <td>Identifica as substâncias envolvidas, mas comete erros nas equações balanceadas ou na explicação da toxicidade do Cl₂.</td>
+              <td>Apresenta equações balanceadas corretas e diferencia neutralização ácido-base de óxido-redução.</td>
+              <td>Explica com rigor o equilíbrio químico do hipoclorito, o papel do pH, equações redox balanceadas e mecanismos celulares da toxicidade pulmonar.</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">
+                <i class="fa-solid fa-shield-halved text-success me-1"></i> Viabilidade Prática e Biossegurança (25%)
+              </td>
+              <td>Propõe soluções caras ou perigosas que não resolvem o problema financeiro de Dona Francisca.</td>
+              <td>Propõe evitar misturas, mas não oferece alternativas concretas ou de baixo custo para as manchas difíceis.</td>
+              <td>Apresenta receitas seguras (água e sabão, diluição correta) com estimativa realista de custos.</td>
+              <td>Plano completo de limpeza em duas etapas (limpeza mecânica com tensoativo + desinfecção clorada correta), custos detalhados e protocolo de primeiros socorros.</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">
+                <i class="fa-solid fa-comments text-info me-1"></i> Linguagem, Empatia e Comunicação (20%)
+              </td>
+              <td>Usa jargões inacessíveis ou adota postura de julgamento e culpa em relação às diaristas.</td>
+              <td>Linguagem excessivamente técnica ou material visualmente poluído e de difícil compreensão para pessoas leigas.</td>
+              <td>Comunicação clara, empática e acessível, com boa diagramação e apelo visual adequado.</td>
+              <td>Comunicação exemplar: cartilha cativante, empática, valorização da dignidade do trabalho doméstico e combate eficaz à desinformação digital.</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">
+                <i class="fa-solid fa-users-gear text-secondary me-1"></i> Trabalho em Equipe e Organização (15%)
+              </td>
+              <td>Apenas um membro trabalhou ou a equipe não cumpriu os prazos e entregáveis combinados.</td>
+              <td>Divisão desigual do trabalho e produtos incompletos ou desconexos entre si.</td>
+              <td>Boa divisão de papéis e entrega de todos os três produtos solicitados com boa qualidade.</td>
+              <td>Cooperação impecável: integração perfeita entre os 4 especialistas, cumprimento rigoroso e liderança colaborativa.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- VERSÃO MOBILE (Cartões Otimizados para Celular - Sem Rolar pro Lado!) -->
+    <div class="d-lg-none mb-5">
+      <!-- Critério 1 -->
+      <div class="rubric-card-mobile">
+        <h5 class="fw-bold text-primary mb-3">
+          <i class="fa-solid fa-atom me-2"></i>1. Domínio Químico e Fundamentação (40%)
+        </h5>
+        <div class="rubric-level-item excelente">
+          <span class="badge bg-success mb-1">Excelente (4 pts)</span>
+          <p class="small mb-0 text-main">Explica com rigor o equilíbrio químico do hipoclorito, o papel do pH, equações redox balanceadas e mecanismos da toxicidade pulmonar.</p>
+        </div>
+        <div class="rubric-level-item bom">
+          <span class="badge bg-primary mb-1">Bom (3 pts)</span>
+          <p class="small mb-0 text-main">Apresenta equações balanceadas corretas e diferencia neutralização ácido-base de reações de óxido-redução.</p>
+        </div>
+        <div class="rubric-level-item regular">
+          <span class="badge bg-warning text-dark mb-1">Regular (2 pts)</span>
+          <p class="small mb-0 text-main">Identifica as substâncias envolvidas, mas comete erros nas equações ou na explicação da toxicidade do Cl₂.</p>
+        </div>
+        <div class="rubric-level-item insuficiente">
+          <span class="badge bg-danger mb-1">Insuficiente (1 pt)</span>
+          <p class="small mb-0 text-main">Não identifica as substâncias nem as reações. Considera erroneamente que toda mistura é neutralização inofensiva.</p>
+        </div>
+      </div>
+
+      <!-- Critério 2 -->
+      <div class="rubric-card-mobile">
+        <h5 class="fw-bold text-success mb-3">
+          <i class="fa-solid fa-shield-halved me-2"></i>2. Viabilidade Prática e Biossegurança (25%)
+        </h5>
+        <div class="rubric-level-item excelente">
+          <span class="badge bg-success mb-1">Excelente (4 pts)</span>
+          <p class="small mb-0 text-main">Plano completo de limpeza em duas etapas (limpeza mecânica + desinfecção clorada correta), custos detalhados e protocolo de primeiros socorros.</p>
+        </div>
+        <div class="rubric-level-item bom">
+          <span class="badge bg-primary mb-1">Bom (3 pts)</span>
+          <p class="small mb-0 text-main">Apresenta receitas seguras (água e sabão, diluição correta) com estimativa realista de custos.</p>
+        </div>
+        <div class="rubric-level-item regular">
+          <span class="badge bg-warning text-dark mb-1">Regular (2 pts)</span>
+          <p class="small mb-0 text-main">Propõe evitar misturas, mas não oferece alternativas concretas ou de baixo custo para as manchas difíceis.</p>
+        </div>
+        <div class="rubric-level-item insuficiente">
+          <span class="badge bg-danger mb-1">Insuficiente (1 pt)</span>
+          <p class="small mb-0 text-main">Propõe soluções caras ou perigosas que não resolvem o problema financeiro de Dona Francisca.</p>
+        </div>
+      </div>
+
+      <!-- Critério 3 -->
+      <div class="rubric-card-mobile">
+        <h5 class="fw-bold text-info mb-3">
+          <i class="fa-solid fa-comments me-2"></i>3. Linguagem, Empatia e Comunicação (20%)
+        </h5>
+        <div class="rubric-level-item excelente">
+          <span class="badge bg-success mb-1">Excelente (4 pts)</span>
+          <p class="small mb-0 text-main">Comunicação exemplar: cartilha cativante, empática, valorização do trabalho doméstico e combate eficaz à desinformação.</p>
+        </div>
+        <div class="rubric-level-item bom">
+          <span class="badge bg-primary mb-1">Bom (3 pts)</span>
+          <p class="small mb-0 text-main">Comunicação clara, empática e acessível, com boa diagramação e apelo visual adequado.</p>
+        </div>
+        <div class="rubric-level-item regular">
+          <span class="badge bg-warning text-dark mb-1">Regular (2 pts)</span>
+          <p class="small mb-0 text-main">Linguagem excessivamente técnica ou material visualmente poluído e de difícil compreensão para pessoas leigas.</p>
+        </div>
+        <div class="rubric-level-item insuficiente">
+          <span class="badge bg-danger mb-1">Insuficiente (1 pt)</span>
+          <p class="small mb-0 text-main">Usa jargões inacessíveis ou adota postura de julgamento e culpa em relação às diaristas.</p>
+        </div>
+      </div>
+
+      <!-- Critério 4 -->
+      <div class="rubric-card-mobile">
+        <h5 class="fw-bold text-secondary mb-3">
+          <i class="fa-solid fa-users-gear me-2"></i>4. Trabalho em Equipe e Organização (15%)
+        </h5>
+        <div class="rubric-level-item excelente">
+          <span class="badge bg-success mb-1">Excelente (4 pts)</span>
+          <p class="small mb-0 text-main">Cooperação impecável: integração perfeita entre os 4 especialistas, cumprimento rigoroso e liderança colaborativa.</p>
+        </div>
+        <div class="rubric-level-item bom">
+          <span class="badge bg-primary mb-1">Bom (3 pts)</span>
+          <p class="small mb-0 text-main">Boa divisão de papéis e entrega de todos os três produtos solicitados com boa qualidade.</p>
+        </div>
+        <div class="rubric-level-item regular">
+          <span class="badge bg-warning text-dark mb-1">Regular (2 pts)</span>
+          <p class="small mb-0 text-main">Divisão desigual do trabalho e produtos incompletos ou desconexos entre si.</p>
+        </div>
+        <div class="rubric-level-item insuficiente">
+          <span class="badge bg-danger mb-1">Insuficiente (1 pt)</span>
+          <p class="small mb-0 text-main">Apenas um membro trabalhou ou a equipe não cumpriu os prazos e entregáveis combinados.</p>
+        </div>
+      </div>
     </div>
 
     <!-- Quiz Rápido de Fixação -->
-    <div class="row justify-content-center pt-3">
+    <div class="row justify-content-center pt-2">
       <div class="col-lg-9">
         <div class="text-center mb-4">
           <span class="section-tag"><i class="fa-solid fa-spell-check me-1"></i> Autoavaliação Rápida</span>
@@ -157,7 +255,7 @@
     </div>
 
     <!-- Navegação entre Páginas -->
-    <div class="page-nav-controls d-flex justify-content-between align-items-center">
+    <div class="page-nav-controls">
       <a href="recursos.html" class="btn btn-outline-secondary rounded-pill px-4">
         <i class="fa-solid fa-arrow-left me-2"></i> Anterior: Recursos
       </a>
@@ -168,28 +266,13 @@
   </main>
 
   <!-- ==========================================================================
-       RODAPÉ
+       RODAPÉ LIMPO E MINIMALISTA
        ========================================================================== -->
   <footer class="custom-footer">
-    <div class="container px-lg-5">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6 text-center text-md-start">
-          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
-            <div class="stat-icon bg-primary-subtle text-primary" style="width: 32px; height: 32px; font-size: 1rem;">
-              <i class="fa-solid fa-flask"></i>
-            </div>
-            <span class="fw-bold text-main">WebQuest de Química • Ensino Médio</span>
-          </div>
-          <p class="small mb-0 text-muted">
-            Limpeza ou Perigo? Os Riscos Invisíveis das Misturas Caseiras. Imperatriz - MA.
-          </p>
-        </div>
-
-        <div class="col-md-6 text-center text-md-end">
-          <span class="small d-block text-muted">Autoria: <strong>Alessandro Monteiro de Sousa</strong></span>
-          <span class="small text-muted">Desenvolvido com Bootstrap 5.3, JavaScript Moderno & Prontidão para GitHub Pages</span>
-        </div>
-      </div>
+    <div class="container text-center">
+      <p class="small text-muted mb-0">
+        © 2024 WebQuest de Química • <strong>Alessandro Monteiro de Sousa</strong> • Imperatriz - MA
+      </p>
     </div>
   </footer>
 
