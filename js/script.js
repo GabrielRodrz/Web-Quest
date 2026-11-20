@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Tema Escuro Permanente
+   1. Tema Claro Institucional Permanente
    ========================================================================== */
 function initTheme() {
-  document.documentElement.setAttribute('data-bs-theme', 'dark');
+  document.documentElement.setAttribute('data-bs-theme', 'light');
 }
 
 /* ==========================================================================
@@ -185,16 +185,13 @@ function initSimulator() {
   function renderResult(data) {
     let badgeClass = "bg-danger text-white";
     let borderClass = "border-danger";
-    let liquidColor = "#84cc16";
+    let liquidColor = "#16a34a";
     let animationEffect = "";
-
-    resultCard.classList.remove('toxic-pulse');
 
     if (data.status === "danger") {
       badgeClass = "bg-danger text-white";
       borderClass = "border-danger";
-      liquidColor = "#a3e635"; // Verde-limão tóxico (Cl₂ gasoso)
-      resultCard.classList.add('toxic-pulse');
+      liquidColor = "#dc2626"; // Vermelho Alerta
       animationEffect = `
         <div class="chem-fumes">
           <span class="fume-cloud f1"></span>
@@ -205,7 +202,7 @@ function initSimulator() {
     } else if (data.status === "warning") {
       badgeClass = "bg-warning text-dark";
       borderClass = "border-warning";
-      liquidColor = "#f59e0b"; // Âmbar efervescente
+      liquidColor = "#d97706"; // Âmbar Aviso
       animationEffect = `
         <div class="chem-fizz">
           <span class="fizz-dot b1"></span>
@@ -217,29 +214,29 @@ function initSimulator() {
     } else if (data.status === "success") {
       badgeClass = "bg-success text-white";
       borderClass = "border-success";
-      liquidColor = "#06b6d4"; // Azul-piscina limpo
+      liquidColor = "#16a34a"; // Verde Aprovado
       animationEffect = `
         <div class="chem-fizz">
-          <span class="fizz-dot b1" style="background: rgba(255,255,255,0.85);"></span>
-          <span class="fizz-dot b2" style="background: rgba(255,255,255,0.85);"></span>
+          <span class="fizz-dot b1" style="background: rgba(22, 163, 74, 0.7);"></span>
+          <span class="fizz-dot b2" style="background: rgba(22, 163, 74, 0.7);"></span>
         </div>
       `;
     } else if (data.status === "info") {
-      badgeClass = "bg-info text-dark";
-      borderClass = "border-info";
-      liquidColor = "#64748b";
+      badgeClass = "bg-primary text-white";
+      borderClass = "border-primary";
+      liquidColor = "#1d4ed8";
     }
 
     const flaskGraphic = `
       <div class="flask-vis-wrapper">
         ${animationEffect}
         <svg class="flask-svg" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M42 10 H58 V35 L88 95 C92 103 86 112 76 112 H24 C14 112 8 103 12 95 L42 35 V10 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round" class="text-secondary opacity-75"/>
-          <path d="M38 10 H62" stroke="currentColor" stroke-width="5" stroke-linecap="round" class="text-secondary"/>
+          <path d="M42 10 H58 V35 L88 95 C92 103 86 112 76 112 H24 C14 112 8 103 12 95 L42 35 V10 Z" stroke="#334155" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M38 10 H62" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
           <path class="flask-liquid-path" d="M22 92 L38 58 H62 L78 92 C80 98 76 106 68 106 H32 C24 106 20 98 22 92 Z" fill="${liquidColor}" opacity="0.85"/>
-          <line x1="48" y1="70" x2="56" y2="70" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-          <line x1="45" y1="82" x2="55" y2="82" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-          <line x1="42" y1="94" x2="54" y2="94" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+          <line x1="48" y1="70" x2="56" y2="70" stroke="#475569" stroke-width="2" opacity="0.6"/>
+          <line x1="45" y1="82" x2="55" y2="82" stroke="#475569" stroke-width="2" opacity="0.6"/>
+          <line x1="42" y1="94" x2="54" y2="94" stroke="#475569" stroke-width="2" opacity="0.6"/>
         </svg>
       </div>
     `;
@@ -490,33 +487,10 @@ function initQuiz() {
 }
 
 /* ==========================================================================
-   5. Partículas Moleculares Flutuantes no Fundo (Efeito Ciência)
+   5. Partículas Moleculares Flutuantes (Desativado para Layout Institucional)
    ========================================================================== */
 function createFloatingParticles() {
-  const targetHeader = document.querySelector('.hero-section') || document.querySelector('.page-header-banner');
-  if (!targetHeader) return;
-
-  const container = document.createElement('div');
-  container.className = 'chem-bg-particles';
-
-  const molecules = ['H₂O', 'Cl₂', 'pH', 'NaClO', 'HCl', 'OH⁻', 'CO₂'];
-  const leftPositions = [8, 22, 38, 55, 72, 88];
-
-  leftPositions.forEach((pos, idx) => {
-    const bubble = document.createElement('div');
-    bubble.className = 'chem-floating-bubble';
-    bubble.textContent = molecules[idx % molecules.length];
-    bubble.style.left = `${pos}%`;
-    const size = Math.floor(Math.random() * 18) + 36; // 36px a 54px
-    bubble.style.width = `${size}px`;
-    bubble.style.height = `${size}px`;
-    bubble.style.animationDuration = `${12 + (idx * 2)}s`;
-    bubble.style.animationDelay = `${idx * 1.8}s`;
-    container.appendChild(bubble);
-  });
-
-  targetHeader.style.position = 'relative';
-  targetHeader.appendChild(container);
+  // Mantido desativado para garantir um visual limpo e institucional
 }
 
 /* ==========================================================================
