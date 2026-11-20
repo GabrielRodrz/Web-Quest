@@ -36,10 +36,6 @@
 7. **Matriz de Avaliação (Rubrica):**
    - Critérios claros e transparentes divididos em 4 níveis (Insuficiente, Regular, Bom e Excelente).
 
-8. **Guia Docente & Alinhamento à BNCC:**
-   - Habilidades da BNCC contempladas: `EM13CNT101`, `EM13CNT104`, `EM13CNT301` e `EM13CNT307`.
-   - Referências completas das obras de Herreid (1998), Sá & Queiroz (2010), ANVISA e SEDUC-MA.
-
 ---
 
 ## 🚀 Como Publicar no GitHub Pages (Passo a Passo Rápido)
@@ -87,7 +83,7 @@ Web Quest/
 ├── problematizacao.html  # 3. Problematização: Questões norteadoras para os estudantes
 ├── atividade.html        # 4. Atividade Prática: Proposta em equipe + Simulador Químico com Frasco Animado
 ├── avaliacao.html        # 5. Avaliação: Rubrica analítica (mobile/desktop) e Quiz interativo com confetes
-├── conclusao.html        # 6. Conclusão: Síntese pedagógica, alinhamento à BNCC e créditos
+├── conclusao.html        # 6. Conclusão: Síntese pedagógica e créditos do autor
 ├── css/
 │   └── style.css         # Estilização completa, variáveis, animações moleculares e responsividade
 ├── js/
