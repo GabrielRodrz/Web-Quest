@@ -389,48 +389,48 @@ function initChecklist() {
 }
 
 /* ==========================================================================
-   4. Quiz com Comemoração de Acertos
+   4. Quiz com Comemoração de Acertos (Linguagem Direta e Acessível)
    ========================================================================== */
 const quizQuestions = [
   {
-    question: "1. No caso de Dona Francisca em Imperatriz, qual gás tóxico e sufocante foi produzido pela mistura de água sanitária (NaClO) com o desincrustante ácido (HCl)?",
+    question: "1. No caso de Dona Francisca, qual gás tóxico e perigoso saiu da mistura de água sanitária com o limpador ácido, provocando tosse e ardência nos olhos?",
     options: [
-      { text: "A) Gás Oxigênio (O₂), que não causa danos pulmonares.", correct: false },
-      { text: "B) Gás Cloro (Cl₂), que reage com a umidade das vias aéreas formando ácidos corrosivos.", correct: true },
-      { text: "C) Gás Metano (CH₄), que apenas tem odor desagradável de decomposição.", correct: false },
-      { text: "D) Gás Carbônico (CO₂), inofensivo e responsável por refrigerantes.", correct: false }
+      { text: "A) Gás Oxigênio (O₂), que é o ar puro que respiramos.", correct: false },
+      { text: "B) Gás Cloro (Cl₂), um gás venenoso e sufocante que queima as vias respiratórias.", correct: true },
+      { text: "C) Gás Hélio (He), que apenas deixa a voz fina.", correct: false },
+      { text: "D) Vapor de água comum, que não causa nenhum dano.", correct: false }
     ],
-    explanation: "Correto! O hipoclorito de sódio sofre óxido-redução com o ácido clorídrico (HCl), desprendendo Cloro molecular (Cl₂), altamente tóxico e com capacidade de destruir o epitélio pulmonar."
+    explanation: "Muito bem! A água sanitária misturada com ácidos libera Gás Cloro (Cl₂). Ele é altamente tóxico e queima os olhos e os pulmões."
   },
   {
-    question: "2. Um colega de classe de Mariana argumentou: 'Se um produto é ácido e o outro é básico, não deveria ocorrer apenas neutralização?'. Por que essa afirmação é equivocada no caso dos produtos de limpeza comerciais?",
+    question: "2. Um colega de Mariana achava que misturar ácido com base sempre virava só água e sal. Por que misturar água sanitária com produtos ácidos é tão perigoso?",
     options: [
-      { text: "A) Porque produtos comerciais não são substâncias puras em soluções ideais; eles contêm agentes oxidantes e outros íons reativos que geram gases e reações de oxi-redução violentas.", correct: true },
-      { text: "B) Porque a Química do cotidiano não segue as mesmas leis científicas dos laboratórios.", correct: false },
-      { text: "C) Porque o vinagre e a água sanitária possuem o mesmo valor de pH na escala universal.", correct: false },
-      { text: "D) Porque a neutralização sempre produz substâncias inflamáveis e explosivas.", correct: false }
+      { text: "A) Porque a água sanitária tem hipoclorito, que em contato com ácidos sofre uma reação forte e solta gases perigosos.", correct: true },
+      { text: "B) Porque todo produto de limpeza explode instantaneamente.", correct: false },
+      { text: "C) Porque o vinagre e a água sanitária têm o mesmo pH.", correct: false },
+      { text: "D) Porque os produtos de limpeza não seguem leis da Química.", correct: false }
     ],
-    explanation: "Exato! Nem todo ácido + base produz apenas sal neutro e água. O hipoclorito é um oxidante enérgico. Em meio ácido, ele oxida cloretos a gás cloro (Cl₂), e não uma simples água com sal inofensiva."
+    explanation: "Exato! A água sanitária tem uma substância oxidante (hipoclorito). Quando entra em contato com ácidos, a reação gera gases venenosos em vez de uma mistura calma."
   },
   {
-    question: "3. Por que a famosa mistura de 'Vinagre + Bicarbonato de Sódio' amplamente divulgada no TikTok é considerada um desperdício do ponto de vista químico?",
+    question: "3. Por que a receita de misturar 'Vinagre + Bicarbonato de Sódio' famosa na internet não é recomendada para limpar de verdade?",
     options: [
-      { text: "A) Porque ela produz gases venenosos que destroem móveis e vidros.", correct: false },
-      { text: "B) Porque o ácido acético neutraliza a basicidade do bicarbonato, gerando água, CO₂ e um sal inofensivo que não tem poder nem desengordurante nem desincrustante.", correct: true },
-      { text: "C) Porque o bicarbonato reage apenas em temperaturas superiores a 300 °C.", correct: false },
-      { text: "D) Porque o vinagre se transforma em álcool etílico instantaneamente.", correct: false }
+      { text: "A) Porque ela produz radiação que destrói as roupas.", correct: false },
+      { text: "B) Porque o ácido do vinagre anula a base do bicarbonato: a espuma é só gás carbônico (CO₂) e o que sobra no balde perde a força de limpeza.", correct: true },
+      { text: "C) Porque essa mistura vira óleo de cozinha instantaneamente.", correct: false },
+      { text: "D) Porque o bicarbonato só funciona se for misturado com refrigerante.", correct: false }
     ],
-    explanation: "Muito bem! O borbulhamento é apenas gás carbônico (CO₂). O ácido e a base se anulam mutuamente, resultando numa solução aquosa de acetato de sódio, que perde tanto a propriedade desincrustante do ácido quanto a propriedade desengordurante do bicarbonato."
+    explanation: "Perfeito! A espuminha nos vídeos é só gás carbônico (CO₂). O ácido e a base se anulam, virando água com sal comum, jogando o dinheiro de ambos no ralo."
   },
   {
-    question: "4. Qual é a recomendação oficial da ANVISA e do CFQ para realizar uma limpeza eficiente e de baixo custo sem arriscar a vida das trabalhadoras?",
+    question: "4. Qual é a forma correta, mais barata e 100% segura de limpar uma casa sem arriscar a saúde das trabalhadoras?",
     options: [
-      { text: "A) Misturar todos os desinfetantes disponíveis em um balde fechado para potencializar o aroma.", correct: false },
-      { text: "B) Usar água fervente com água sanitária pura sem luvas para acelerar a evaporação.", correct: false },
-      { text: "C) Fazer a limpeza prévia com água e detergente/sabão neutro, enxaguar e só depois desinfetar com água sanitária na diluição correta (sem misturas).", correct: true },
-      { text: "D) Substituir qualquer produto de limpeza por querosene aquecido em ambiente fechado.", correct: false }
+      { text: "A) Misturar todos os desinfetantes juntos no mesmo balde para ficar mais cheiroso.", correct: false },
+      { text: "B) Ferver água sanitária no fogão para evaporar mais rápido.", correct: false },
+      { text: "C) Lavar primeiro com água e sabão/detergente, enxaguar bem e só depois aplicar água sanitária diluída em água fria (sem misturar nada).", correct: true },
+      { text: "D) Fechar as janelas para o cheiro dos produtos não escapar.", correct: false }
     ],
-    explanation: "Perfeito! A limpeza em duas etapas (remoção mecânica de sujeira com detergente neutro + enxágue + desinfecção com água sanitária diluída em água fria) é a mais barata, segura e com maior respaldo científico."
+    explanation: "Show de bola! A regra de ouro é a limpeza em duas etapas: primeiro lava com sabão/detergente e água, enxágua, e depois desinfeta com água sanitária diluída, sempre em local bem arejado."
   }
 ];
 
