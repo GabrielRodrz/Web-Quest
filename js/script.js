@@ -20,98 +20,98 @@ function initTheme() {
 }
 
 /* ==========================================================================
-   2. Simulador Químico de Misturas com Frasco Animado
+   2. Simulador Químico de Misturas com Frasco Animado (Linguagem Direta)
    ========================================================================== */
 const chemicalData = {
   // Água Sanitária + Desincrustante Ácido (O caso de Dona Francisca)
-  "sanitaria_desincrustante": {
+  "desincrustante_sanitaria": {
     status: "danger",
-    badge: "☠️ PERIGO EXTREMO — GÁS CLORO TÓXICO",
-    title: "Reação Redox com Liberação de Cl₂ (O Caso de Dona Francisca)",
-    formula: "NaClO(aq) + 2 HCl(aq) ➔ Cl₂(g) ↑ + NaCl(aq) + H₂O(l)",
-    explanation: "A água sanitária contém hipoclorito de sódio (meio básico). Os limpadores de cerâmica ou pedras comumente contêm ácido clorídrico (ácido muriático). A reação entre eles é uma óxido-redução violenta que oxida o íon cloreto e reduz o hipoclorito, liberando <strong>gás cloro (Cl₂)</strong>.",
-    hazards: "O Cl₂ é um gás amarelado-esverdeado de odor sufocante. Ao entrar em contato com os olhos e a água dos pulmões, forma ácido clorídrico e ácido hipocloroso nas mucosas, causando ardência imediata, tosse intensa, asfixia e risco iminente de <strong>edema agudo de pulmão</strong>.",
-    verdict: "JAMAIS MISTURAR! Se inalado, abandone o local imediatamente e procure socorro médico urgente (Ligue 192 / SAMU)."
+    badge: "🛑 PERIGO GRAVE — SOLTA GÁS CLORO TÓXICO",
+    title: "O Caso de Dona Francisca no Banheiro",
+    formula: "Água Sanitária + Limpador Ácido ➔ Gás Cloro (Cl₂) Perigoso!",
+    explanation: "A água sanitária contém cloro (hipoclorito) e os limpadores de cerâmica contêm ácidos fortes. Quando você junta os dois no mesmo balde ou vaso sanitário, ocorre uma reação química que libera <strong>Gás Cloro (Cl₂)</strong> no ar.",
+    hazards: "Esse gás tem cheiro forte e sufocante. Ele queima os olhos, arde a garganta, provoca tosse intensa e pode fechar a respiração em poucos segundos!",
+    verdict: "NUNCA MISTURE! Se acontecer, saia correndo do local para respirar ar puro e ligue para o SAMU (192)."
   },
   // Água Sanitária + Vinagre
   "sanitaria_vinagre": {
     status: "danger",
-    badge: "☠️ PERIGO ALTO — LIBERAÇÃO DE VAPORES DE CLORO",
-    title: "Acidificação do Hipoclorito por Ácido Acético",
-    formula: "NaClO(aq) + CH₃COOH(aq) ➔ HClO(aq) + CH₃COONa(aq)  [HClO instável ➔ Cl₂ ↑]",
-    explanation: "O vinagre contém cerca de 4% a 5% de ácido acético. Ao abaixar o pH da água sanitária, o equilíbrio químico é deslocado para a formação de ácido hipocloroso (HClO), que rapidamente se decompõe liberando gás cloro (Cl₂) e vapores corrosivos.",
-    hazards: "Ardência nos olhos, sensação de garganta queimando, falta de ar e crises agudas de broncoespasmo.",
-    verdict: "PERIGOSO! Não misture vinagre com água sanitária em hipótese alguma."
+    badge: "🛑 PERIGO — SOLTA VAPORES DE CLORO",
+    title: "Água Sanitária + Vinagre",
+    formula: "Água Sanitária + Vinagre ➔ Liberação de Vapores Tóxicos",
+    explanation: "Muita gente acha que o vinagre é fraquinho e não faz mal, mas ele é um ácido. Ao misturar com água sanitária, o ácido libera o cloro na forma de vapor tóxico.",
+    hazards: "Ardência forte nos olhos, dor de cabeça, tosse e falta de ar.",
+    verdict: "NÃO MISTURE! Use o vinagre sozinho para tirar calcário e a água sanitária sozinha para desinfetar."
   },
   // Água Sanitária + Amônia
-  "sanitaria_amonia": {
+  "amonia_sanitaria": {
     status: "danger",
-    badge: "☠️ PERIGO EXTREMO — FORMAÇÃO DE CLORAMINAS TÓXICAS",
-    title: "Reação com Compostos Nitrogenados",
-    formula: "NH₃(aq) + NaClO(aq) ➔ NH₂Cl(g) ↑ + NaOH(aq)",
-    explanation: "Muitos desinfetantes multiuso contêm amônia. Quando combinados com hipoclorito, formam compostos gasosos tóxicos chamados <strong>cloraminas (NH₂Cl e NHCl₂)</strong>.",
-    hazards: "Vapores asfixiantes, danos celulares graves nos alvéolos pulmonares, dor torácica intensa e tontura severa.",
-    verdict: "LETAL! Combinação frequentemente responsável por internações de trabalhadores de limpeza."
+    badge: "☠️ PERIGO EXTREMO — GÁS VENENOSO",
+    title: "Água Sanitária + Desinfetante com Amônia",
+    formula: "Cloro + Amônia ➔ Cloraminas (Gases Venenosos)",
+    explanation: "Alguns desinfetantes perfumados têm amônia na fórmula. A mistura com água sanitária produz gases perigosos chamados cloraminas.",
+    hazards: "Vapores asfixiantes que queimam as vias respiratórias, causam dor no peito e podem causar desmaio.",
+    verdict: "MUITO PERIGOSO! Nunca misture água sanitária com desinfetantes perfumados no mesmo balde."
   },
   // Água Sanitária + Álcool 70%
-  "sanitaria_alcool": {
+  "alcool_sanitaria": {
     status: "danger",
-    badge: "☠️ PERIGO GRAVE — FORMAÇÃO DE CLOROFÓRMIO",
-    title: "Haloformação (Clorofórmio e Ácido Clorídrico)",
-    formula: "C₂H₅OH + NaClO ➔ CHCl₃(g) ↑ + HCOONa + NaCl + H₂O",
-    explanation: "A reação haloforme entre o hipoclorito e compostos orgânicos alcoólicos produz clorofórmio (triclorometano) e compostos organoclorados tóxicos.",
-    hazards: "O clorofórmio é um potente depressor do sistema nervoso central, hepatotóxico (fígado) e nefrotóxico (rins), causando tontura, sonolência e desmaio.",
-    verdict: "PROIBIDO! O álcool deve ser usado isoladamente em superfícies secas para higienização."
+    badge: "🛑 PERIGO — FORMA CLOROFÓRMIO",
+    title: "Água Sanitária + Álcool",
+    formula: "Cloro + Álcool ➔ Clorofórmio e Compostos Tóxicos",
+    explanation: "A mistura de água sanitária com álcool produz compostos tóxicos, inclusive clorofórmio.",
+    hazards: "Causa tontura, dor de cabeça, enjoo e pode fazer a pessoa desmaiar no banheiro fechado.",
+    verdict: "ERRADO! Passe o álcool puro apenas para higienizar superfícies já secas."
   },
   // Vinagre + Bicarbonato de Sódio
-  "vinagre_bicarbonato": {
+  "bicarbonato_vinagre": {
     status: "warning",
-    badge: "⚠️ INEFICAZ — O FAMOSO MITO DA INTERNET",
-    title: "Reação de Neutralização Ácido-Base (Desperdício)",
-    formula: "CH₃COOH(aq) + NaHCO₃(s) ➔ CH₃COONa(aq) + H₂O(l) + CO₂(g) ↑",
-    explanation: "O vinagre é ácido (pH ~2,5) e o bicarbonato é básico (pH ~8,5). Ao misturá-los, ocorre uma reação de neutralização instantânea. A intensa efervescência que encanta as pessoas nas redes sociais é apenas liberação de dióxido de carbono (CO₂ - gás inofensivo presente no refrigerante).",
-    hazards: "O sal formado (acetato de sódio) e a água resultante não possuem poder desincrustante nem desengordurante potente! Se colocado em um frasco borrifador fechado, a pressão do CO₂ pode estourar o recipiente e ferir quem estiver por perto.",
-    verdict: "DESPERDÍCIO! Use o bicarbonato com água/detergente para ação mecânica e o vinagre separadamente para remover calcário/manchas alcalinas. Nunca os misture em frasco fechado."
+    badge: "⚠️ NÃO FUNCIONA — O FAMOSO MITO DA INTERNET",
+    title: "Vinagre + Bicarbonato: Apenas Espuminha!",
+    formula: "Vinagre (Ácido) + Bicarbonato (Base) ➔ Água com Sal + Gás Carbônico",
+    explanation: "Nos vídeos do TikTok parece mágico porque sobe muita espuma. Mas quimicamente, o ácido do vinagre anula o bicarbonato! A espuma é só gás carbônico (o mesmo gás do refrigerante).",
+    hazards: "Não solta fumaça tóxica, mas a mistura perde o poder de limpeza e você joga dinheiro fora. Além disso, se fechar em uma garrafa borrifadora, a pressão da espuma pode estourar a garrafa!",
+    verdict: "DESPERDÍCIO! Use o bicarbonato com água para esfregar gordura, e o vinagre sozinho para tirar manchas de calcário."
   },
   // Água Oxigenada + Vinagre
-  "vinagre_oxigenada": {
+  "oxigenada_vinagre": {
     status: "danger",
-    badge: "☠️ PERIGO ALTO — FORMAÇÃO DE ÁCIDO PERACÉTICO",
-    title: "Síntese Acidental de Ácido Peracético",
-    formula: "CH₃COOH(aq) + H₂O₂(aq) ⇌ CH₃COOOH(aq) + H₂O(l)",
-    explanation: "A combinação do ácido acético do vinagre com o peróxido de hidrogênio (água oxigenada) sintetiza o ácido peracético concentrado.",
-    hazards: "Substância altamente corrosiva que queima a pele, causa lesões corneanas irreversíveis e danifica permanentemente os tecidos respiratórios se inalada.",
-    verdict: "NUNCA MISTURE! Embora usado industrialmente em hospitais sob estrito controle, seu preparo caseiro é perigosíssimo."
+    badge: "🛑 PERIGO — ÁCIDO CORROSIVO",
+    title: "Água Oxigenada + Vinagre",
+    formula: "Vinagre + Água Oxigenada ➔ Ácido Peracético Corrosivo",
+    explanation: "Essa mistura cria um ácido forte e corrosivo que pode queimar a pele e estragar móveis e pisos.",
+    hazards: "Queimaduras na pele, ardência nos olhos e irritação no nariz e garganta.",
+    verdict: "NÃO FAÇA EM CASA! Mantenha cada produto em seu frasco original."
   },
   // Água Sanitária + Água Oxigenada
-  "sanitaria_oxigenada": {
+  "oxigenada_sanitaria": {
     status: "danger",
-    badge: "💥 REAÇÃO VIOLENTA — DESPRENDIMENTO RÁPIDO DE OXIGÊNIO",
-    title: "Decomposição Exotérmica Rápida",
-    formula: "NaClO(aq) + H₂O₂(aq) ➔ NaCl(aq) + H₂O(l) + O₂(g) ↑ + Calor",
-    explanation: "Ocorre uma oxidação rápida do peróxido pelo hipoclorito, liberando grandes volumes de gás oxigênio puro com aumento súbito de temperatura e pressão.",
-    hazards: "Risco de explosão em recipientes fechados e projeção de líquidos cáusticos nos olhos e rosto.",
-    verdict: "EVITE! Inativa as propriedades de desinfecção de ambos os produtos e pode causar estouros mecânicos."
+    badge: "💥 CUIDADO — PODE ESPIRRAR NO ROSTO",
+    title: "Reação Rápida com Bolhas e Calor",
+    formula: "Água Sanitária + Água Oxigenada ➔ Libera muito Oxigênio e Calor",
+    explanation: "Os dois reagem rápido, esquentam e soltam muitas bolhas de oxigênio de uma vez.",
+    hazards: "O líquido pode espirrar nos olhos e no rosto da pessoa, e se o frasco estiver fechado ele pode estourar.",
+    verdict: "EVITE! Uma substância anula a outra e não limpa nada."
   },
   // Detergente + Bicarbonato
-  "detergente_bicarbonato": {
+  "bicarbonato_detergente": {
     status: "success",
-    badge: "✅ MISTURA SEGURA & EFICAZ (Ação Mecânica e Tensoativa)",
-    title: "Saponificação Auxiliar e Abrasão Suave",
-    formula: "Detergente Tensoativo + NaHCO₃(s) + H₂O(l) [Sem reação violenta]",
-    explanation: "O bicarbonato age como abrasivo suave não riscante e levemente alcalinizante, enquanto o detergente quebra a tensão superficial e emulsifica gorduras.",
-    hazards: "Nenhum gás tóxico gerado. Totalmente seguro.",
-    verdict: "APROVADO! Excelente alternativa caseira de baixo custo para remover panelas engorduradas e pias com segurança."
+    badge: "✅ MISTURA SEGURA E MUITO BOA!",
+    title: "Detergente Neutro + Bicarbonato de Sódio",
+    formula: "Detergente (Tira Gordura) + Bicarbonato (Esfrega sem Riscar)",
+    explanation: "Essa é uma receita caseira segura e que realmente funciona! O detergente solta a gordura e o bicarbonato ajuda a esfregar sujeiras difíceis sem riscar a panela ou o azulejo.",
+    hazards: "Nenhum gás perigoso! É 100% seguro para a saúde.",
+    verdict: "APROVADO! Ótima para limpar pias, fogões e o fundo de panelas engorduradas sem gastar muito."
   },
   // Água Sanitária + Detergente Neutro
-  "sanitaria_detergente": {
+  "detergente_sanitaria": {
     status: "info",
-    badge: "ℹ️ USE COM RESSALVAS (Atenção ao Rótulo)",
-    title: "Diluição e Possível Perda de Eficiência",
-    formula: "NaClO(aq) + Tensoativos Neutros",
-    explanation: "Se o detergente for rigorosamente neutro, não há reação tóxica imediata. No entanto, muitos detergentes contêm fragrâncias, corantes ou aminas que podem degradar o hipoclorito ou reduzir drasticamente o poder desinfetante.",
-    hazards: "Dermatite de contato caso não use luvas.",
-    verdict: "O ideal recomendado pela ANVISA é limpar primeiro a sujeira com água e sabão/detergente, enxaguar bem, e só depois aplicar a água sanitária diluída para desinfetar."
+    badge: "ℹ️ USE DO JEITO CERTO (EM 2 ETAPAS)",
+    title: "Água Sanitária com Detergente",
+    formula: "Primeiro limpa com detergente ➔ Enxágua ➔ Depois usa a água sanitária",
+    explanation: "Não solta fumaça tóxica se o detergente for neutro comum. Porém, misturar os dois no mesmo balde faz a água sanitária perder a força de matar germes.",
+    hazards: "Pode ressecar a pele das mãos se não usar luvas.",
+    verdict: "REGRA DE OURO: Primeiro lave o chão com água e sabão/detergente, enxágue com água, e por último passe a água sanitária diluída para desinfetar."
   }
 };
 
